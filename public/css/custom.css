@@ -1,0 +1,136 @@
+body {
+    font-family: 'K2D', sans-serif;
+}
+
+.img-logo {
+    max-width: 30%;
+}
+
+.nav-mecanix {
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.item-menu {
+    font-size: 1rem;
+    font-family: 'K2D', sans-serif;
+}
+
+.home-conteudo {
+    margin-top: 3rem;
+}
+
+.text-home1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 0% 10% 0% 10%;
+    font-weight: 600;
+}
+
+.text-home2 {
+    font-size: 1.5rem;
+}
+
+.text-desc-home-1 {
+    text-align: center;
+    color: rgba(107, 114, 128);
+    padding: 0 20% 0 20%;
+}
+
+.text-desc-home-2 {
+    text-align: center;
+    color: #f50;
+    padding-right: 20%;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.busca-home1 {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 43px;
+    min-width: 148px;
+    height: 44px;
+}
+
+.busca-home2 {
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 43px;
+    min-width: 148px;
+    height: 44px;
+}
+
+
+.submit-btn-home {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 43px;
+    min-width: 148px;
+    height: 44px;
+    border-radius: 0 10px 10px 0;
+    background-color: #f50!important;
+    color: #ffffff;
+}
+
+.diagnostico-btn-home {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 1%;
+    font-size: 16px;
+    height: 44px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #f50!important;
+    color: #ffffff;
+}
+
+.box-category {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #cbd6dc;
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    margin: 0 10px 0 3px;
+}
+
+.text-category-home {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: rgb(95, 95, 95);
+}
+
+.especialista-home {
+    padding-left: 20%;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.text-diagnostico {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.chatroom {
+    margin-left: 15%;
+}
+
+.chatbot {
+    width: 390px;
+    height: 450px;
+}
