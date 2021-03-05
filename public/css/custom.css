@@ -134,3 +134,27 @@ body {
     width: 390px;
     height: 450px;
 }
+
+
+/*Mobile*/
+@media (max-width: 767.98px) {
+    .especialista-home {
+        padding-left: 10%;
+    }
+    
+    .submit-btn-home {
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .busca-home2 {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .text-desc-home-2 {
+        text-align: center;
+        color: #f50;
+        font-size: 1.8rem;
+        font-weight: 800;
+        padding: 7%;
+    }
+}
