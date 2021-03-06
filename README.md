@@ -61,7 +61,6 @@ docker-compose up -d
 
 ```sh
 Output
-Creating mecanix-db    ... done
 Creating mecanix-app   ... done
 Creating mecanix-nginx ... done
 ```
