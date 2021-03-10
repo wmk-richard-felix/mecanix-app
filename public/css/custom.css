@@ -2,6 +2,10 @@ body {
     font-family: 'K2D', sans-serif;
 }
 
+.header-mecanix {
+    margin-top: 6%;
+}
+
 .img-logo {
     max-width: 30%;
 }
@@ -130,6 +134,12 @@ body {
     font-size: 1.5rem;
 }
 
+.text-nome-pagina {
+    font-size: 1.5rem;
+    padding: 0rem;
+}
+
+
 .chatroom {
     margin-left: 15%;
 }
@@ -138,6 +148,33 @@ body {
     width: 390px;
     height: 450px;
 }
+
+.h1-form-cadastro {
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+/*
+ * FilePond Custom Styles
+ */
+
+.filepond--drop-label {
+	color: #4c4e53;
+}
+
+.filepond--label-action {
+	text-decoration-color: #babdc0;
+}
+
+.filepond--panel-root {
+	background-color: #edf0f4;
+}
+
+.filepond--root {
+	width:170px;
+	margin: 0 auto;
+}
+
 
 
 /*Mobile*/

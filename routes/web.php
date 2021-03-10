@@ -21,6 +21,12 @@ Route::get('diagnostico', function () {
     return view('pages.diagnostico');
 })->name('diagnostico');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('index');
+// Paginas autenticadas
+
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard', function () {
+    return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('cadastrar-oficina', function () {
+    return view('pages.cadastrar-oficina');
+})->name('cadastrar-oficina');
