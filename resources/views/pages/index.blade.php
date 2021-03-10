@@ -53,15 +53,15 @@
                             <p class="text-category-home">Mecânicos</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/funileiro.jpg') }}" alt="Funileiro" width="310" class="img-fluid>
+                            <img src="{{ asset('/img/funileiro.jpg') }}" alt="Funileiro" width="310" class="img-fluid">
                             <p class="text-category-home">Funileiros</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/vidraceiro.jpg') }}" alt="Vidraceiro" width="310" class="img-fluid>
+                            <img src="{{ asset('/img/vidraceiro.jpg') }}" alt="Vidraceiro" width="310" class="img-fluid">
                             <p class="text-category-home">Vidraceiros</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/eletrica.jpg') }}" alt="Auto Elétrica" width="310" class="img-fluid>
+                            <img src="{{ asset('/img/eletrica.jpg') }}" alt="Auto Elétrica" width="310" class="img-fluid">
                             <p class="text-category-home">Auto Elétrico</p>
                         </div>
                     </div>

@@ -13,6 +13,10 @@ body {
     width: 100%;
 }
 
+.menu-mobile {
+    background-color: #ffffff;
+}
+
 .item-menu {
     font-size: 1rem;
     font-family: 'K2D', sans-serif;
@@ -156,5 +160,21 @@ body {
         font-size: 1.8rem;
         font-weight: 800;
         padding: 7%;
+    }
+
+    .box-category {
+        margin-top: 5%;
+    }
+
+    .chatroom {
+        margin-left: 0px;
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }

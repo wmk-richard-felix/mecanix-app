@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/'             , 'pages.index');
-// Route::view('diagnostico'   , 'pages.diagnostico')->name('diagnostico');
+Route::get('/', function () {
+    return view('pages.index');
+})->name('inicio');
 
 Route::get('diagnostico', function () {
     return view('pages.diagnostico');
