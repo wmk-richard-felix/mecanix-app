@@ -22,6 +22,11 @@ Route::get('diagnostico', function () {
     return view('pages.diagnostico');
 })->name('diagnostico');
 
+
+Route::get('cadastrar-oficina', function () {
+    return view('pages.cadastrar-oficina');
+})->name('cadastrar-oficina');
+
 //=======================
 // Paginas autenticadas
 //=======================
@@ -29,12 +34,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('cadastrar-oficina', function () {
-    return view('pages.cadastrar-oficina');
-})->name('cadastrar-oficina');
+Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', function () {
+    return view('cadastro-oficina.cadastro');
+})->name('cadastro-oficina');
 
 
 //======================
 // Cadastros
 //======================
-Route::post('cadastrar-oficina/salvar', 'App\Http\Controllers\OficinaController@save');
+Route::post('cadastro-oficina/salvar', 'App\Http\Controllers\OficinaController@save');

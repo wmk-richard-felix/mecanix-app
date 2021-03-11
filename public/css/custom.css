@@ -56,6 +56,21 @@ body {
     font-weight: 800;
 }
 
+.text-desc-cadastro-oficina {
+    text-align: center;
+    color: #929292;
+    padding-right: 20%;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.text-desc-cadastro-oficina2 {
+    text-align: center;
+    color: #929292;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
 .busca-home1 {
     width: 50%;
     padding: 12px 20px;
