@@ -15,6 +15,7 @@ class CreateCategoriaOficinasTable extends Migration
     {
         Schema::create('categoria_oficinas', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->unsignedBigInteger('codigo_oficina');
             $table->unsignedBigInteger('codigo_categoria');
 

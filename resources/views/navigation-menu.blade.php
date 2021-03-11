@@ -21,7 +21,7 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
                         {{ __('Sobre nós') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
+                    <x-jet-nav-link href="{{ route('cadastrar-oficina') }}" :active="request()->routeIs('cadastrar-oficina')" class="item-menu">
                         {{ __('Seja um profissional') }}
                     </x-jet-nav-link>
                 </div>
@@ -37,7 +37,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 botao-perfil">
 
                                         <i data-feather="user"></i>
 
@@ -123,7 +123,7 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
                 {{ __('Sobre nós') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
+            <x-jet-responsive-nav-link href="{{ route('cadastrar-oficina') }}" :active="request()->routeIs('cadastrar-oficina')" class="item-menu">
                 {{ __('Seja um profissional') }}
             </x-jet-responsive-nav-link>
         </div>
