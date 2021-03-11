@@ -7,14 +7,18 @@
 
         <title>{{ config('app.name', 'Mecanix') }}</title>
 
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=K2D:wght@200&display=swap" rel="stylesheet">
         
         <!-- File upload -->
-        <link href="{{ asset('css/filepond.css') }}" rel="stylesheet" />
-        <link href="{{ asset('css/filepond-plugin-image-preview.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/fileinput.min.css')}}" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/fileinput.js')}}"></script>
 
         @livewireStyles
 
@@ -52,19 +56,14 @@
         @stack('modals')
 
         @livewireScripts
+
+        <!-- Bootstrap Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         
-        <script src="{{ asset('js/dist/filepond-plugin-file-metadata.js') }}"></script>
-        <script src="{{ asset('js/dist/filepond-plugin-image-crop.js') }}"></script>
-        
-        <script src="{{ asset('js/dist/filepond-plugin-image-preview.js') }}"></script>
-        <script src="{{ asset('js/dist/filepond.js') }}"></script>
-        <script src="{{ asset('js/filepond.js') }}"></script>
         <!-- Turn all file input elements into ponds -->
         <script>
             FilePond.parse(document.body);
         </script>
-        <script src="{{ asset('js/custom-filepond.js') }}"></script>
-
         <script>
             feather.replace()
         </script>

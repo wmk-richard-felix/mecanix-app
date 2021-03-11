@@ -154,6 +154,7 @@ body {
     padding: 1rem;
 }
 
+
 /*
  * FilePond Custom Styles
  */
@@ -175,7 +176,55 @@ body {
 	margin: 0 auto;
 }
 
+.glyphicon-upload {
+    display: none;
+}
 
+.file-drop-zone-title {
+    padding: 0% !important;
+}
+
+.file-preview {
+    width: 300px;
+    height: 230px;
+}
+
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+}
+
+.form-check-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.custom-control-input {
+    position: absolute;
+    margin-top: .3rem;
+    margin-left: -1.25rem;
+}
+
+.kv-preview-thumb {
+    height: 180px;
+}
+
+.botao-perfil {
+    border: 1px solid transparent!important;
+}
 
 /*Mobile*/
 @media (max-width: 767.98px) {
@@ -211,7 +260,19 @@ body {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
+    .grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
     .grid-cols-4 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .grid-cols-5 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .grid-cols-6 {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
