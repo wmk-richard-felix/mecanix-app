@@ -56,6 +56,21 @@ body {
     font-weight: 800;
 }
 
+.text-desc-cadastro-oficina {
+    text-align: center;
+    color: #929292;
+    padding-right: 20%;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.text-desc-cadastro-oficina2 {
+    text-align: center;
+    color: #929292;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
 .busca-home1 {
     width: 50%;
     padding: 12px 20px;
@@ -102,6 +117,50 @@ body {
     border-radius: 10px 10px 10px 10px;
     background-color: #f50!important;
     color: #ffffff;
+}
+
+.btn-cadastrar-oficina {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 1%;
+    font-size: 26px;
+    height: 70px;
+    width: 20rem;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #f50!important;
+    color: #ffffff;
+}
+
+.btn-lista-oficinas-cadastrar {
+    margin-top: 2%;
+    font-size: 16px;
+    height: 44px;
+    width: 160px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #f50!important;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.btn-lista-oficinas-editar {
+    margin-top: 15%;
+    font-size: 16px;
+    height: 44px;
+    width: 160px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(153, 153, 153)!important;
+    color: #ffffff;
+}
+
+.btn-lista-oficinas-excluir {
+    margin-top: 15%;
+    font-size: 16px;
+    height: 44px;
+    width: 160px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(201, 41, 41)!important;
+    color: #ffffff;
+    margin-left: 1rem;
 }
 
 .box-category {
@@ -154,41 +213,6 @@ body {
     padding: 1rem;
 }
 
-
-/*
- * FilePond Custom Styles
- */
-
-.filepond--drop-label {
-	color: #4c4e53;
-}
-
-.filepond--label-action {
-	text-decoration-color: #babdc0;
-}
-
-.filepond--panel-root {
-	background-color: #edf0f4;
-}
-
-.filepond--root {
-	width:170px;
-	margin: 0 auto;
-}
-
-.glyphicon-upload {
-    display: none;
-}
-
-.file-drop-zone-title {
-    padding: 0% !important;
-}
-
-.file-preview {
-    width: 300px;
-    height: 230px;
-}
-
 .form-check {
     position: relative;
     display: block;
@@ -226,6 +250,15 @@ input[type=checkbox], input[type=radio] {
     border: 1px solid transparent!important;
 }
 
+.lista-oficinas-titulo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.lista-oficinas-conteudo {
+    font-size: 1.3rem;
+}
+
 /*Mobile*/
 @media (max-width: 767.98px) {
     .especialista-home {
@@ -255,6 +288,18 @@ input[type=checkbox], input[type=radio] {
     .chatroom {
         margin-left: 0px;
     }
+    
+    .text-desc-cadastro-oficina {
+        padding: 5%;
+    }
+
+    .text-desc-cadastro-oficina2 {
+        padding: 5%;
+    }
+
+    .header-mecanix {
+        padding-top: 3rem;
+    }
 
     .grid-cols-2 {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -274,5 +319,14 @@ input[type=checkbox], input[type=radio] {
 
     .grid-cols-6 {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .btn-lista-oficinas-editar {
+        margin: 0%;
+    }
+
+    .btn-lista-oficinas-excluir {
+        margin: 0%;
+        margin-top: 2%;
     }
 }
