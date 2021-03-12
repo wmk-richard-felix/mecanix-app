@@ -24,7 +24,7 @@
                                 <p class="lista-oficinas-conteudo">{{ $oficina->email_contato }}</p>
                             </div>
                             <div class="col-span-2 sm:col-span-2">
-                                <a href="#">
+                                <a href="{{ url('editar-oficina/'.$oficina->id) }}">
                                     <button class="btn-primary btn-full btn-lista-oficinas-editar">Editar sua Oficina</button>
                                 </a>
                                 <a href="#">

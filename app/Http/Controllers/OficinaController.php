@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\oficina;
+use App\Models\categoria;
 use App\Models\categoria_oficina;
 use Illuminate\Http\UploadedFile;
 
@@ -199,5 +200,22 @@ class OficinaController extends Controller
         endif;
 
         return redirect(url('/'));
+    }
+
+    /*
+     * Edita a oficina e suas categorias
+     */
+    public function edit($id)
+    {
+        $oficina = oficina::find($id);
+        $categorias = categoria_oficina::where('codigo_oficina', $id)->get();
+        $categoriasMarcadas = [];
+
+        foreach($categorias as $categoria):
+            $descCategoria = categoria::find($categoria->codigo_categoria);
+            array_push($categoriasMarcadas, $descCategoria->descricao);
+        endforeach;
+
+        return view('cadastro-oficina.editar')->with('oficina', $oficina)->with('categorias', $categoriasMarcadas);
     }
 }
