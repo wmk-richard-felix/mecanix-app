@@ -20,7 +20,7 @@
                                     seus problemas automotivos, indicando você especialista!</p>
                                 <center>
                                     <a href="{{route('cadastro-oficina')}}">
-                                        <button class="btn-primary btn-full diagnostico-btn-home">Cadastrar Oficina</button>
+                                        <button class="btn-primary btn-full btn-cadastrar-oficina">Cadastrar Oficina</button>
                                     </a>
                                 </center>
                             </div>

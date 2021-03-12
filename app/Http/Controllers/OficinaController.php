@@ -9,6 +9,27 @@ use Illuminate\Http\UploadedFile;
 
 class OficinaController extends Controller
 {
+    /*
+     * Verifica se o usuário logado já tem oficinas cadastradas
+     */
+    public function verificaCadastro(Request $request)
+    {
+        if (auth()->user() == NULL) :
+            return view('pages.cadastrar-oficina');
+        endif;
+        
+        $oficinas = oficina::where('codigo_usuario', auth()->user()->id)->get();
+        if (count($oficinas)) :
+            // Retorna lista de oficinas do usuário
+            return view('cadastro-oficina.lista')->with('oficinas', $oficinas);
+        endif;
+
+        return view('pages.cadastrar-oficina');
+    }
+
+    /*
+     * Salva a oficina e suas categorias
+     */
     public function save(Request $request)
     {
         /*
@@ -42,7 +63,7 @@ class OficinaController extends Controller
         $oficina->uf = $request->uf;
         $oficina->telefone = $request->telefone;
         $oficina->email_contato = $request->email_contato;
-        $oficina->logo = $request->logo;
+        $oficina->logo = $nome_imagem;
         $oficina->codigo_usuario = auth()->user()->id;
 
         $oficina->save();

@@ -23,9 +23,7 @@ Route::get('diagnostico', function () {
 })->name('diagnostico');
 
 
-Route::get('cadastrar-oficina', function () {
-    return view('pages.cadastrar-oficina');
-})->name('cadastrar-oficina');
+Route::get('cadastrar-oficina', 'App\Http\Controllers\OficinaController@verificaCadastro')->name('cadastrar-oficina');
 
 //=======================
 // Paginas autenticadas
