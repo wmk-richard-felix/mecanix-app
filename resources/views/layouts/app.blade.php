@@ -20,6 +20,10 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
         <script src="{{ asset('js/fileinput.js')}}"></script>
 
+        <!-- Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
         @livewireStyles
 
         <!-- Scripts -->

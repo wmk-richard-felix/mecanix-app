@@ -8,7 +8,7 @@
     <div class="py-12 home-conteudo">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200 busca-home">
 
                     <div class="mt-8 text-home1">
                         Busque o profissional correto para te ajudar com seu problema automotivo
@@ -18,7 +18,8 @@
                         <center>
                             <form action="" method="post">
                                 <input type="text" name="busca" id="busca" placeholder="Óleo de Motor..." class="busca-home1">
-                                <input type="text" name="cep" id="cep" placeholder="CEP " class="busca-home2">
+                                <input type="text" name="uf" id="uf" placeholder="Estado" class="busca-home2">
+                                <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="busca-home3">
                                 <button type="submit" class="submit-btn-home btn-primary btn-full">Buscar</button>
                             </form>
                         </center>
@@ -26,7 +27,7 @@
                 </div>
 
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200 my-12">
-                    <div class="mt-8 text-home1">
+                    <div class="mt-8 text-home1a">
                         Utilize nosso assitente virtual 🤖 para encontrar o problema do seu veículo
                     </div>
 

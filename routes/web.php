@@ -24,6 +24,7 @@ Route::get('diagnostico', function () {
 
 
 Route::get('cadastrar-oficina', 'App\Http\Controllers\OficinaController@verificaCadastro')->name('cadastrar-oficina');
+Route::get('editar-oficina/{id}', 'App\Http\Controllers\OficinaController@edit')->name('editar-oficina');
 
 //=======================
 // Paginas autenticadas
@@ -41,3 +42,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', functio
 // Cadastros
 //======================
 Route::post('cadastro-oficina/salvar', 'App\Http\Controllers\OficinaController@save');
+Route::post('cadastro-oficina/atualizar', 'App\Http\Controllers\OficinaController@update');
