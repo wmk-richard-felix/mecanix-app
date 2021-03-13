@@ -8,8 +8,9 @@
     <div>
         <div class="max-w-7xl mx-auto pb-10 sm:px-6 lg:px-8">
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <form action="{{ action("App\Http\Controllers\OficinaController@save") }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action("App\Http\Controllers\OficinaController@update") }}" method="post" enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" name="token_id" value="{{$oficina->id}}">
                     <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md">
                         <h1 class="h1-form-cadastro">Informações Cadastrais</h1>
                         <div class="grid grid-cols-3 gap-6">
@@ -19,7 +20,6 @@
                                 </label>
                                 <img src="{{asset('img/logotipos/'.$oficina->logo)}}" alt="">
                             </div>
-                            {{-- <div class="md:col-span-1"></div> --}}
                             <div class="md:col-span-1">
                                 <!-- Logo -->
                                 <label class="block font-medium text-sm text-gray-700" for="cnpj">
@@ -169,84 +169,88 @@
                         <!-- Categorias -->
                         <h1 class="h1-form-cadastro">Selecione suas categorias</h1>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="arrefecimento" id="arrefecimento" class="custom-control-input" @if(in_array('Arrefecimento', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="arrefecimento" value="1" class="custom-control-input" @if(in_array('1', $categorias)) checked @endif>
                             <label for="arrefecimento" class="custom-control-label">Arrefecimento</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="motor" id="motor" class="custom-control-input" @if(in_array('Motor', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="motor" value="2" class="custom-control-input" @if(in_array('2', $categorias)) checked @endif>
                             <label for="motor" class="custom-control-label">Motor</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="freios" id="freios" class="custom-control-input" @if(in_array('Freios', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="freios" value="3" class="custom-control-input" @if(in_array('3', $categorias)) checked @endif>
                             <label for="freios" class="custom-control-label">Freios</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="escapamentos" id="escapamentos" class="custom-control-input" @if(in_array('Escapamentos', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="escapamentos" value="4" class="custom-control-input" @if(in_array('4', $categorias)) checked @endif>
                             <label for="escapamentos" class="custom-control-label">Escapamentos</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="revisao" id="revisao" class="custom-control-input" @if(in_array('Revisão', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="revisao" value="5" class="custom-control-input" @if(in_array('5', $categorias)) checked @endif>
                             <label for="revisao" class="custom-control-label">Revisão</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="troca_bateria" id="troca_bateria" class="custom-control-input" @if(in_array('Troca de Bateria', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="troca_bateria" value="6" class="custom-control-input" @if(in_array('6', $categorias)) checked @endif>
                             <label for="troca_bateria" class="custom-control-label">Troca de Bateria</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="correias" id="correias" class="custom-control-input" @if(in_array('Correias', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="correias" value="7" class="custom-control-input" @if(in_array('7', $categorias)) checked @endif>
                             <label for="correias" class="custom-control-label">Correias</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="direcao" id="direcao" class="custom-control-input" @if(in_array('Direção Hidráulica', $categorias)) checked @endif>
-                            <label for="direcao" class="custom-control-label">Direção Hidráulica</label>
+                            <input type="checkbox" name="categorias[]" id="funilaria" value="8" class="custom-control-input" @if(in_array('8', $categorias)) checked @endif>
+                            <label for="funilaria" class="custom-control-label">Funilaria</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="transmissao" id="transmissao" class="custom-control-input" @if(in_array('Transmissão', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="transmissao" value="9" class="custom-control-input" @if(in_array('9', $categorias)) checked @endif>
                             <label for="transmissao" class="custom-control-label">Transmissão</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="pneus" id="pneus" class="custom-control-input" @if(in_array('Pneus', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="pneus" value="10" class="custom-control-input" @if(in_array('10', $categorias)) checked @endif>
                             <label for="pneus" class="custom-control-label">Pneus</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="rodas" id="rodas" class="custom-control-input" @if(in_array('Rodas', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="suspensao" value="11" class="custom-control-input" @if(in_array('11', $categorias)) checked @endif>
+                            <label for="pneus" class="custom-control-label">Suspensão</label>
+                        </div>
+                        <div class="form-check mb-3 form-check-inline">
+                            <input type="checkbox" name="categorias[]" id="rodas" value="12" class="custom-control-input" @if(in_array('12', $categorias)) checked @endif>
                             <label for="rodas" class="custom-control-label">Rodas</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="radiador" id="radiador" class="custom-control-input" @if(in_array('Radiador', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="radiador" value="13" class="custom-control-input" @if(in_array('13', $categorias)) checked @endif>
                             <label for="radiador" class="custom-control-label">Radiador</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="freio_abs" id="freio_abs" class="custom-control-input" @if(in_array('Freios ABS', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="freio_abs" value="14" class="custom-control-input" @if(in_array('14', $categorias)) checked @endif>
                             <label for="freio_abs" class="custom-control-label">Freios ABS</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="ar_condicionado" id="ar_condicionado" class="custom-control-input" @if(in_array('Ar Condicionado', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="ar_condicionado" value="15" class="custom-control-input" @if(in_array('15', $categorias)) checked @endif>
                             <label for="ar_condicionado" class="custom-control-label">Ar Condicionado</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="injecao" id="injecao" class="custom-control-input" @if(in_array('Injeção', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="injecao" value="16" class="custom-control-input" @if(in_array('16', $categorias)) checked @endif>
                             <label for="injecao" class="custom-control-label">Injeção</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="suspensao" id="suspensao" class="custom-control-input" @if(in_array('Suspensão', $categorias)) checked @endif>
-                            <label for="suspensao" class="custom-control-label">Suspensão</label>
-                        </div>
-                        <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="airbag" id="airbag" class="custom-control-input" @if(in_array('Airbag', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="airbag" value="17" class="custom-control-input" @if(in_array('17', $categorias)) checked @endif>
                             <label for="airbag" class="custom-control-label">Airbag</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="troca_oleo" id="troca_oleo" class="custom-control-input" @if(in_array('Troca de Óleo', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" value="18" id="troca_oleo" class="custom-control-input" @if(in_array('18', $categorias)) checked @endif>
                             <label for="troca_oleo" class="custom-control-label">Troca de Óleo</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="chaveiro" id="chaveiro" class="custom-control-input" @if(in_array('Chaveiro', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" value="19" id="chaveiro" class="custom-control-input" @if(in_array('19', $categorias)) checked @endif>
                             <label for="chaveiro" class="custom-control-label">Chaveiro</label>
                         </div>
                         <div class="form-check mb-3 form-check-inline">
-                            <input type="checkbox" name="alinhamento_balanceamento" id="alinhamento_balanceamento" class="custom-control-input" @if(in_array('Alinhamento e Balanceamento', $categorias)) checked @endif>
+                            <input type="checkbox" name="categorias[]" id="alinhamento_balanceamento" value="20" class="custom-control-input" @if(in_array('20', $categorias)) checked @endif>
                             <label for="alinhamento_balanceamento" class="custom-control-label">Alinhamento e Balanceamento</label>
+                        </div>
+                        <div class="form-check mb-3 form-check-inline">
+                            <input type="checkbox" name="categorias[]" id="direcao" value="21" class="custom-control-input" @if(in_array('21', $categorias)) checked @endif>
+                            <label for="direcao" class="custom-control-label">Direção Hidráulica</label>
                         </div>
                     </div>
                     <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">

@@ -16,6 +16,10 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
+        <!-- Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
         @livewireStyles
 
         <!-- Scripts -->

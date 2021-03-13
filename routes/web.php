@@ -42,3 +42,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', functio
 // Cadastros
 //======================
 Route::post('cadastro-oficina/salvar', 'App\Http\Controllers\OficinaController@save');
+Route::post('cadastro-oficina/atualizar', 'App\Http\Controllers\OficinaController@update');

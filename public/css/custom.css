@@ -21,6 +21,12 @@ body {
     background-color: #ffffff;
 }
 
+.busca-home {
+    background-color: #ffa536;
+    padding-bottom: 7rem;
+    padding-top: 7rem;
+}
+
 .item-menu {
     font-size: 1rem;
     font-family: 'K2D', sans-serif;
@@ -31,6 +37,16 @@ body {
 }
 
 .text-home1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 0% 10% 0% 10%;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 5px #424242;
+}
+
+.text-home1a {
     text-align: center;
     font-size: 2rem;
     line-height: 2rem;
@@ -72,7 +88,7 @@ body {
 }
 
 .busca-home1 {
-    width: 50%;
+    width: 45%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -85,7 +101,7 @@ body {
 }
 
 .busca-home2 {
-    width: 10%;
+    width: 5%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -96,6 +112,17 @@ body {
     height: 44px;
 }
 
+.busca-home3 {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 43px;
+    min-width: 148px;
+    height: 44px;
+}
 
 .submit-btn-home {
     font-weight: 600;
@@ -135,7 +162,7 @@ body {
     margin-top: 2%;
     font-size: 16px;
     height: 44px;
-    width: 160px;
+    width: 200px;
     border-radius: 10px 10px 10px 10px;
     background-color: #f50!important;
     color: #ffffff;
