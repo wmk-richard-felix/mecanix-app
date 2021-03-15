@@ -23,8 +23,8 @@ body {
 
 .busca-home {
     background-color: #ffa536;
-    padding-bottom: 7rem;
-    padding-top: 7rem;
+    padding-bottom: 6.4rem;
+    padding-top: 1rem;
 }
 
 .item-menu {
@@ -33,7 +33,7 @@ body {
 }
 
 .home-conteudo {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .text-home1 {
@@ -89,39 +89,43 @@ body {
 
 .busca-home1 {
     width: 45%;
-    padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 10px 0 0 10px;
     font-weight: 600;
     font-size: 16px;
-    line-height: 43px;
     min-width: 148px;
     height: 44px;
+    overflow: scroll;
+    top: auto;
+    bottom: 40px;
+    
 }
 
 .busca-home2 {
-    width: 5%;
-    padding: 12px 20px;
+    width: 10%;
     margin: 8px 0;
     box-sizing: border-box;
     font-weight: 600;
     font-size: 16px;
-    line-height: 43px;
     min-width: 148px;
     height: 44px;
+    overflow: scroll;
+    top: auto;
+    bottom: 40px;
 }
 
 .busca-home3 {
     width: 25%;
-    padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     font-weight: 600;
     font-size: 16px;
-    line-height: 43px;
     min-width: 148px;
     height: 44px;
+    overflow: scroll;
+    top: auto;
+    bottom: 40px;
 }
 
 .submit-btn-home {
@@ -153,6 +157,18 @@ body {
     font-size: 26px;
     height: 70px;
     width: 20rem;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #f50!important;
+    color: #ffffff;
+}
+
+.btn-busca-oficinas {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 1%;
+    font-size: 16px;
+    height: 40px;
+    width: 10rem;
     border-radius: 10px 10px 10px 10px;
     background-color: #f50!important;
     color: #ffffff;
