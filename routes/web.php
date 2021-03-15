@@ -14,17 +14,21 @@ use App\Http\Controllers\OficinaController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('inicio');
-
 Route::get('diagnostico', function () {
     return view('pages.diagnostico');
 })->name('diagnostico');
 
+//======================
+// Home Page
+//======================
+Route::get('/', 'App\Http\Controllers\IndexController@Index')->name('home');
+Route::post('/retorno-busca', 'App\Http\Controllers\IndexController@RealizaBusca')->name('busca-home');
 
-Route::get('cadastrar-oficina', 'App\Http\Controllers\OficinaController@verificaCadastro')->name('cadastrar-oficina');
-Route::get('editar-oficina/{id}', 'App\Http\Controllers\OficinaController@edit')->name('editar-oficina');
+//======================
+// Busca
+//======================
+Route::get('/busca-assistente', 'App\Http\Controllers\IndexController@BuscaUrl')->name('busca-assistente');
+
 
 //=======================
 // Paginas autenticadas
@@ -41,5 +45,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', functio
 //======================
 // Cadastros
 //======================
+Route::get('cadastrar-oficina', 'App\Http\Controllers\OficinaController@verificaCadastro')->name('cadastrar-oficina');
+Route::get('editar-oficina/{id}', 'App\Http\Controllers\OficinaController@edit')->name('editar-oficina');
 Route::post('cadastro-oficina/salvar', 'App\Http\Controllers\OficinaController@save');
 Route::post('cadastro-oficina/atualizar', 'App\Http\Controllers\OficinaController@update');

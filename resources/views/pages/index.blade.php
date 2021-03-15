@@ -16,10 +16,26 @@
 
                     <div class="mt-6 text-gray-500  mb-12">
                         <center>
-                            <form action="" method="post">
-                                <input type="text" name="busca" id="busca" placeholder="Óleo de Motor..." class="busca-home1">
-                                <input type="text" name="uf" id="uf" placeholder="Estado" class="busca-home2">
-                                <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="busca-home3">
+                            <form action="{{ route('busca-home') }}" method="post">
+                                @csrf
+                                <select required name="categoria" id="categoria" class="form-select busca-home1">
+                                    <option value="">Selecione a categoria..</option>
+                                    @foreach ($categorias as $categoria)
+                                        <option value="{{$categoria->id}}">{{$categoria->descricao}}</option>
+                                    @endforeach
+                                </select>
+                                <select required name="uf" id="uf" class="busca-home2">
+                                    <option value="">Selecione</option>
+                                    @foreach ($estados as $estado)
+                                        <option value="{{$estado->uf}}">{{$estado->uf}}</option>
+                                    @endforeach
+                                </select>
+                                <select name="cidade" id="cidade" class="busca-home3">
+                                    <option value="">Selecione a cidade</option>
+                                    @foreach ($cidades as $cidade)
+                                        <option value="{{$cidade->cidade}}">{{$cidade->cidade}}</option>
+                                    @endforeach
+                                </select>
                                 <button type="submit" class="submit-btn-home btn-primary btn-full">Buscar</button>
                             </form>
                         </center>
