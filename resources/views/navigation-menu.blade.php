@@ -12,7 +12,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
+                    <x-jet-nav-link href="{{ route('busca') }}" :active="request()->routeIs('')" class="item-menu">
                         {{ __('Buscar profissionais') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('diagnostico') }}" :active="request()->routeIs('diagnostico')" class="item-menu">

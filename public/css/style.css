@@ -1,0 +1,178 @@
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #a5a5a5;
+    font-weight: 300;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #a5a5a5;
+    font-weight: 300;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.section-content {
+    margin-top: 3rem;
+}
+.line-bottom {
+    border-bottom: 1px solid #a5a5a5;
+}
+.banner-home {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.section-category {
+    margin-bottom: 60px;
+}
+.box-category h2 {
+    margin-bottom: 0px;
+}
+.box-category a {
+    background-color: #094971;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 60px 0px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+.section-diagnosis {
+    margin-bottom: 60px;
+}
+.btn-diagnosis {
+    background: #db871a;
+    border-color: #db871a;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+.btn-diagnosis:hover {
+    background: #094971;
+    border-color: #094971;
+} 
+
+.large{
+    height: 110px;
+}
+
+.small{
+    height: 70px;
+}
+
+/*Página de Busca*/
+.result-left {
+    background-color: #DCDCDC;
+}
+.result-left h2 {
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.result-left #ex1Slider .slider-selection {
+	background: #BABABA;
+    width: 100%;
+}
+.result-left button.btn-filter {
+    background-color: #db871a;
+    color: #fff;
+    border-color: #db871a;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+.result-left button.btn-filter:hover {
+    background: #094971;
+    border-color: #094971;
+    color: #fff;
+}
+.box-especialista {
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 15px;
+}
+.box-especialista h2 {
+    margin-bottom: 10px;
+}
+.list-start i.bi-star {
+    color: #DCDCDC;
+}
+.list-proximity span {
+    color: #a5a5a5;
+    margin-right: 10px;
+}
+.list-proximity {
+    text-align: right;
+}
+.list-start i.bi-star-fill {
+    color: yellow;
+}
+.list-proximity .bi-circle-fill.green {
+    color: green;
+}
+.list-proximity .bi-circle-fill.yellow {
+    color: yellow;
+}
+.list-proximity .bi-circle-fill.red {
+    color: red;
+}
+.box-pagination button {
+    background-color: #db871a;
+    color: #fff;
+    border-color: #db871a;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+.box-pagination button:hover {
+    background: #094971;
+    border-color: #094971;
+    color: #fff;
+}
+/*Página detalhe de especialista */
+.box-especialista ul {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0px;
+}
+.box-especialista ul li {
+    background-color: #a5a5a5;
+    position: relative;
+    float: left;
+    padding: 5px 15px;
+    list-style: none;
+    margin-right: 10px;
+    border-radius: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.box-especialista ul li:hover {
+    background-color: #7f7f7f;
+}
+.box-especialista address {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.box-especialista address .bi {
+    color: #db871a;
+    margin-right: 20px;
+}
+.box-especialista strong {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+/*Mobile*/
+@media (max-width: 778px)
+{
+    .box-category {
+        margin-bottom: 20px;
+    }
+}

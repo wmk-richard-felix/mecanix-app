@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OficinaController;
-
+use App\Http\Controllers\BuscaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +22,8 @@ Route::get('diagnostico', function () {
     return view('pages.diagnostico');
 })->name('diagnostico');
 
+Route::get('buscar/especialista', [BuscaController::class, 'index'])->name('busca');
+Route::get('especialista/{categoria}/{especialista}', [BuscaController::class, 'detail'])->name('busca-detalhe');
 
 Route::get('cadastrar-oficina', 'App\Http\Controllers\OficinaController@verificaCadastro')->name('cadastrar-oficina');
 Route::get('editar-oficina/{id}', 'App\Http\Controllers\OficinaController@edit')->name('editar-oficina');
