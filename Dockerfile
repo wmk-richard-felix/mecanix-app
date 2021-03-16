@@ -11,5 +11,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set working directory
 WORKDIR /var/www
+
+USER 1001
 EXPOSE 8000
-EXPOSE 80
