@@ -22,9 +22,18 @@ body {
 }
 
 .busca-home {
-    background-color: #ffa536;
-    padding-bottom: 6.4rem;
-    padding-top: 1rem;
+    background:
+    linear-gradient(
+      rgba(0,0,0,.6),rgba(0,0,0,.6)
+    ),
+    url(/img/img-home.jpg) no-repeat;
+    background-size: 100%;
+    padding-bottom: 8rem;
+    padding-top: 2rem;
+}
+
+.busca-home::after {
+    background-color:rgba(0,0,0,.6);
 }
 
 .item-menu {
@@ -32,18 +41,23 @@ body {
     font-family: 'K2D', sans-serif;
 }
 
+.form-busca-home {
+    background-color: #fff;
+    padding: 1rem 0 1rem 0;
+    border-radius: 20px 20px 20px 20px;
+    width: 100%;
+}
+
 .home-conteudo {
     margin-top: 1rem;
 }
 
 .text-home1 {
-    text-align: center;
-    font-size: 2rem;
+    text-align: left;
+    font-size: 1.5rem;
     line-height: 2rem;
-    padding: 0% 10% 0% 10%;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
-    text-shadow: 1px 1px 5px #424242;
 }
 
 .text-home1a {
@@ -52,6 +66,31 @@ body {
     line-height: 2rem;
     padding: 0% 10% 0% 10%;
     font-weight: 600;
+}
+
+.text-home1-b {
+    text-align: left;
+    font-size: 3.2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.text-home1-c {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.text-home1-d {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 1rem;
+    color: #fa7020;
 }
 
 .text-home2 {
@@ -91,7 +130,7 @@ body {
     width: 45%;
     margin: 8px 0;
     box-sizing: border-box;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 10px 10px 10px;
     font-weight: 600;
     font-size: 16px;
     min-width: 148px;
@@ -99,13 +138,14 @@ body {
     overflow: scroll;
     top: auto;
     bottom: 40px;
-    
+    border-color: #afafaf;
 }
 
 .busca-home2 {
     width: 10%;
     margin: 8px 0;
     box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
     font-weight: 600;
     font-size: 16px;
     min-width: 148px;
@@ -113,12 +153,14 @@ body {
     overflow: scroll;
     top: auto;
     bottom: 40px;
+    border-color: #afafaf;
 }
 
 .busca-home3 {
     width: 25%;
     margin: 8px 0;
     box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
     font-weight: 600;
     font-size: 16px;
     min-width: 148px;
@@ -126,6 +168,7 @@ body {
     overflow: scroll;
     top: auto;
     bottom: 40px;
+    border-color: #afafaf;
 }
 
 .submit-btn-home {
@@ -134,7 +177,7 @@ body {
     line-height: 43px;
     min-width: 148px;
     height: 44px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 5px 5px 5px 5px;
     background-color: #f50!important;
     color: #ffffff;
 }
@@ -302,18 +345,22 @@ input[type=checkbox], input[type=radio] {
     font-size: 1.3rem;
 }
 
+.mecanix-login {
+    padding-top: 3rem !important;
+}
+
 /*Mobile*/
 @media (max-width: 767.98px) {
     .especialista-home {
         padding-left: 10%;
     }
+
+    .chatbot {
+        width: 100%;
+    }
     
     .submit-btn-home {
-        border-radius: 10px 10px 10px 10px;
-    }
-
-    .busca-home2 {
-        border-radius: 0 10px 10px 0;
+        border-radius: 5px 5px 5px 5px;
     }
 
     .text-desc-home-2 {
@@ -371,5 +418,33 @@ input[type=checkbox], input[type=radio] {
     .btn-lista-oficinas-excluir {
         margin: 0%;
         margin-top: 2%;
+    }
+
+    .busca-home {
+        background:
+        linear-gradient(
+          rgba(0,0,0,.6),rgba(0,0,0,.6)
+        ),
+        url(/img/img-home-mobile.jpg) no-repeat;
+        background-size: 160%;
+        padding-bottom: 8rem;
+        padding-top: 2rem;
+    }
+
+    .text-home1-b {
+        font-size: 2.8rem;
+        line-height: 2.9rem;
+    }
+
+    .busca-home1 {
+        width: 90%;
+    }
+
+    .busca-home2 {
+        width: 90%;
+    }
+
+    .busca-home3 {
+        width: 90%;
     }
 }
