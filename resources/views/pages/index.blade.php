@@ -9,14 +9,16 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200 busca-home">
-
+                    <div class="mt-8 text-home1-b">
+                        Precisando consertar seu carro?
+                    </div>
                     <div class="mt-8 text-home1">
-                        Busque o profissional correto para te ajudar com seu problema automotivo
+                        Busque o profissional certo para seu problema automotivo
                     </div>
 
                     <div class="mt-6 text-gray-500  mb-12">
                         <center>
-                            <form action="{{ route('busca-home') }}" method="post">
+                            <form action="{{ route('busca-home') }}" method="post" class="form-busca-home">
                                 @csrf
                                 <select required name="categoria" id="categoria" class="form-select busca-home1">
                                     <option value="">Selecione a categoria..</option>
@@ -39,6 +41,14 @@
                                 <button type="submit" class="submit-btn-home btn-primary btn-full">Buscar</button>
                             </form>
                         </center>
+                    </div>
+
+                    <div class="text-home1-c">
+                        O carro quebrou e não sabe quem procurar?
+                    </div>
+
+                    <div class="text-home1-d">
+                        <a href="{{ route('diagnostico') }}">Faça um diagnóstico</a>
                     </div>
                 </div>
 
