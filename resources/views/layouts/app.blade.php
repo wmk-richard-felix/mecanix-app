@@ -33,6 +33,8 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
+        <script src="{{ asset('js/busca-cep.js') }}"></script>
     </head>
     <body>
         <x-jet-banner />
