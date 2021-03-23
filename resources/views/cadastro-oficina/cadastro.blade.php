@@ -66,7 +66,7 @@
                                 <label class="block font-medium text-sm text-gray-700" for="endereco">
                                     Endereço
                                 </label>
-                                <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="endereco" name="endereco" type="text" >
+                                <input class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="endereco" name="endereco" type="text" >
                             </div>
 
                             <!-- Número -->
@@ -90,7 +90,7 @@
                                 <label class="block font-medium text-sm text-gray-700" for="bairro">
                                     Bairro
                                 </label>
-                                <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="bairro" name="bairro" type="text" >
+                                <input class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="bairro" name="bairro" type="text" >
                             </div>
 
                             <!-- Cidade -->
@@ -98,7 +98,7 @@
                                 <label class="block font-medium text-sm text-gray-700" for="cidade">
                                     Cidade
                                 </label>
-                                <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="cidade" name="cidade" type="text" >
+                                <input class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="cidade" name="cidade" type="text" >
                             </div>
 
                             <!-- UF -->
@@ -106,7 +106,7 @@
                                 <label class="block font-medium text-sm text-gray-700" for="uf">
                                     UF
                                 </label>
-                                <select name="uf" id="uf" class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" >
+                                <select name="uf" id="uf" class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" >
                                     <option value="AC">Acre</option>
                                     <option value="AL">Alagoas</option>
                                     <option value="AP">Amapá</option>
