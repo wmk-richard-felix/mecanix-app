@@ -270,6 +270,19 @@ body {
     color: rgb(95, 95, 95);
 }
 
+.text-oficina-nome-home {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: rgb(95, 95, 95);
+    font-weight: 600;
+}
+
+.text-oficina-cidade-home {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: rgb(95, 95, 95);
+}
+
 .especialista-home {
     padding-left: 20%;
 }

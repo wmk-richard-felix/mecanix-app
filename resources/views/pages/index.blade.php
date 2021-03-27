@@ -119,22 +119,13 @@
                     </div>
 
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l grid grid-cols-4">
-                        <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/mecanico.jpg') }}" alt="Mecânico" width="310">
-                            <p class="text-category-home">Nome Oficina</p>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/mecanico.jpg') }}" alt="Mecânico" width="310">
-                            <p class="text-category-home">Nome Oficina</p>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/mecanico.jpg') }}" alt="Mecânico" width="310">
-                            <p class="text-category-home">Nome Oficina</p>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12 box-category">
-                            <img src="{{ asset('/img/mecanico.jpg') }}" alt="Mecânico" width="310">
-                            <p class="text-category-home">Nome Oficina</p>
-                        </div>
+                        @foreach ($oficinas as $oficina)
+                            <div class="col-md-6 col-lg-6 col-sm-12 box-category">
+                                <img src="{{ asset('/img/logotipos/'.$oficina->logo) }}" alt="Logotipo" width="310">
+                                <p class="text-oficina-nome-home">{{ $oficina->nome_fantasia }}</p>
+                                <p class="text-oficina-cidade-home">{{ $oficina->cidade }} - {{ $oficina->uf }}</p>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 

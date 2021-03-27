@@ -14,11 +14,13 @@ class IndexController extends Controller
         $categorias = DB::table('categorias')->select('id','descricao')->orderBy('descricao')->get();
         $estados =  DB::table('oficinas')->select('uf')->orderBy('uf')->distinct()->get();
         $cidades =  DB::table('oficinas')->select('cidade')->orderBy('cidade')->distinct()->get();
+        $oficinas = DB::table('oficinas')->select()->orderBy('id', 'desc')->take(4)->get();
 
         return view('pages.index')
             ->with('categorias', $categorias)
             ->with('estados', $estados)
-            ->with('cidades', $cidades);
+            ->with('cidades', $cidades)
+            ->with('oficinas', $oficinas);
     }
 
     public function RealizaBusca(Request $request)
