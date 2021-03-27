@@ -36,13 +36,13 @@ $(document).ready(function() {
                     if (!("erro" in dados)) {
                         //Atualiza os campos com os valores da consulta.
                         $("#endereco").val(dados.logradouro);
-                        $("#endereco").prop('disabled', true);
+                        $("#endereco").prop('readonly', true);
                         $("#bairro").val(dados.bairro);
-                        $("#bairro").prop('disabled', true);
+                        $("#bairro").prop('readonly', true);
                         $("#cidade").val(dados.localidade);
-                        $("#cidade").prop('disabled', true);
+                        $("#cidade").prop('readonly', true);
                         $("#uf").val(dados.uf);
-                        $("#uf").prop('disabled', true);
+                        $("#uf").prop('readonly', true);
                     } //end if.
                     else {
                         //CEP pesquisado não foi encontrado.
