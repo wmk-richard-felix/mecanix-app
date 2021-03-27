@@ -54,6 +54,14 @@
                                         </label>
                                         <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" name="nome_fantasia" id="nome_fantasia" type="text" value="{{$oficina->nome_fantasia}}">
                                     </div>
+                                    
+                                    <!-- Info -->
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="nome_fantasia">
+                                            Informações da sua oficina
+                                        </label>
+                                        <textarea class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" name="info" id="info" style="height: 170px">{{$oficina->info}}</textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>

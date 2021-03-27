@@ -65,6 +65,7 @@ class OficinaController extends Controller
         $oficina->telefone = $request->telefone;
         $oficina->email_contato = $request->email_contato;
         $oficina->logo = $nome_imagem;
+        $oficina->info = $request->info;
         $oficina->codigo_usuario = auth()->user()->id;
 
         $oficina->save();
@@ -119,6 +120,7 @@ class OficinaController extends Controller
         $oficina->cep = $request->cep;
         $oficina->endereco = $request->endereco;
         $oficina->numero = $request->numero;
+        $oficina->info = $request->info;
         
         if ($request->complemento==NULL) :
             $oficina->complemento = '';
