@@ -100,7 +100,7 @@
                             <img src="{{ asset('/img/homem-mecanico.png') }}" alt="Especialista" width="300">
                         </div>
                         <div class="flex items-center">
-                            <div class="text-desc-home-2">
+                            <div class="text-banner text-desc-home-2">
                                 <p>Com o Mecanix seu problema é resolvido mais rápido!</p>
                                 <p>Busque o profissional mais qualificado para te ajudar com seu problema automotivo.</p>
                                 <center>
