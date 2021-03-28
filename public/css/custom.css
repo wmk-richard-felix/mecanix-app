@@ -1,13 +1,33 @@
+:root {
+    --primary: #f50;
+    --primary-light: #fa7020;
+
+    --secondary: #094971;
+
+    --danger: rgb(201, 41, 41);
+
+    --neutral-darkest: rgba(0,0,0,.6);
+    --neutral-darker: rgb(95, 95, 95);
+    --neutral-dark: rgba(107, 114, 128);
+    --neutral-mid:rgb(153, 153, 153);
+    --neutral-mid-light: #afafaf;
+    --neutral-light: #cbd6dc;
+    --neutral-lightest: #ffffff;  
+    
+}
+  
 body {
     font-family: 'K2D', sans-serif;
 }
+
 
 .header-mecanix {
     margin-top: 6%;
 }
 
 .img-logo {
-    max-width: 30%;
+    min-width: 180px;
+    max-width: 60%;
 }
 
 .nav-mecanix {
@@ -18,13 +38,13 @@ body {
 }
 
 .menu-mobile {
-    background-color: #ffffff;
+    background-color: var(--neutral-lightest);
 }
 
 .busca-home {
     background:
     linear-gradient(
-      rgba(0,0,0,.6),rgba(0,0,0,.6)
+      var(--neutral-darkest),var(--neutral-darkest)
     ),
     url(/img/img-home.jpg) no-repeat;
     background-size: 100%;
@@ -33,7 +53,7 @@ body {
 }
 
 .busca-home::after {
-    background-color:rgba(0,0,0,.6);
+    background-color:var(--neutral-darkest);
 }
 
 .item-menu {
@@ -61,7 +81,7 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
-    color: #fff;
+    color: var(--neutral-lightest);
 }
 
 .text-home1a {
@@ -77,7 +97,7 @@ body {
     font-size: 3.2rem;
     line-height: 2rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--neutral-lightest);
     font-family: Arial, Helvetica, sans-serif !important;
 }
 
@@ -85,7 +105,7 @@ body {
     text-align: center;
     font-size: 1.15rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--neutral-lightest);
 }
 
 .text-home1-d {
@@ -94,40 +114,37 @@ body {
     font-weight: 600;
     text-decoration: underline;
     margin-top: 1rem;
-    color: #fa7020;
+    color: var(--primary-light);
 }
 
 .text-home2 {
     font-size: 1.5rem;
+    
 }
 
 .text-desc-home-1 {
     text-align: center;
-    color: rgba(107, 114, 128);
+    color: var(--neutral-dark);
     padding: 0 20% 0 20%;
 }
 
 .text-desc-home-2 {
-    text-align: center;
-    color: #f50;
     padding-right: 20%;
     font-size: 1.8rem;
     font-weight: 800;
 }
 
 .text-desc-cadastro-oficina {
-    text-align: center;
-    color: #929292;
-    padding-right: 20%;
+    padding-right: 10%;
+    padding-left: 10%;
     font-size: 1.3rem;
     font-weight: 800;
 }
 
 .text-desc-cadastro-oficina2 {
-    text-align: center;
-    color: #929292;
     font-size: 1.6rem;
     font-weight: 800;
+    padding-left: 10%;
 }
 
 .busca-home1 {
@@ -142,7 +159,7 @@ body {
     overflow: scroll;
     top: auto;
     bottom: 40px;
-    border-color: #afafaf;
+    border-color: var(--neutral-mid-light);
 }
 
 .busca-home2 {
@@ -157,7 +174,7 @@ body {
     overflow: scroll;
     top: auto;
     bottom: 40px;
-    border-color: #afafaf;
+    border-color: var(--neutral-mid-light);
 }
 
 .busca-home3 {
@@ -172,7 +189,7 @@ body {
     overflow: scroll;
     top: auto;
     bottom: 40px;
-    border-color: #afafaf;
+    border-color: var(--neutral-mid-light);
 }
 
 .submit-btn-home {
@@ -205,8 +222,8 @@ body {
     height: 70px;
     width: 20rem;
     border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
 }
 
 .btn-busca-oficinas {
@@ -217,8 +234,8 @@ body {
     height: 40px;
     width: 10rem;
     border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
 }
 
 .btn-lista-oficinas-cadastrar {
@@ -227,8 +244,8 @@ body {
     height: 44px;
     width: 200px;
     border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
     font-weight: 500;
 }
 
@@ -238,8 +255,8 @@ body {
     height: 44px;
     width: 160px;
     border-radius: 10px 10px 10px 10px;
-    background-color: rgb(153, 153, 153)!important;
-    color: #ffffff;
+    background-color: var(--neutral-mid)!important;
+    color: var(--neutral-lightest);
 }
 
 .btn-lista-oficinas-excluir {
@@ -248,15 +265,15 @@ body {
     height: 44px;
     width: 160px;
     border-radius: 10px 10px 10px 10px;
-    background-color: rgb(201, 41, 41)!important;
-    color: #ffffff;
+    background-color: var(--danger)!important;
+    color: var(--neutral-lightest);
     margin-left: 1rem;
 }
 
 .box-category {
     padding: 1rem;
     text-align: center;
-    border: 1px solid #cbd6dc;
+    border: 1px solid var(--neutral-light);
     box-sizing: border-box;
     border-radius: 12px;
     overflow: hidden;
@@ -267,20 +284,20 @@ body {
 .text-category-home {
     margin-top: 12px;
     font-size: 1rem;
-    color: rgb(95, 95, 95);
+    color: var(--neutral-darker);
 }
 
 .text-oficina-nome-home {
     margin-top: 12px;
     font-size: 1rem;
-    color: rgb(95, 95, 95);
+    color: var(--neutral-darker);
     font-weight: 600;
 }
 
 .text-oficina-cidade-home {
     margin-top: 12px;
     font-size: 1rem;
-    color: rgb(95, 95, 95);
+    color: var(--neutral-darker);
 }
 
 .especialista-home {
@@ -382,7 +399,7 @@ input[type=checkbox], input[type=radio] {
 
     .text-desc-home-2 {
         text-align: center;
-        color: #f50;
+        color: var(--secondary);
         font-size: 1.8rem;
         font-weight: 800;
         padding: 7%;
@@ -440,7 +457,7 @@ input[type=checkbox], input[type=radio] {
     .busca-home {
         background:
         linear-gradient(
-          rgba(0,0,0,.6),rgba(0,0,0,.6)
+            var(--neutral-darkest),var(--neutral-darkest)
         ),
         url(/img/img-home-mobile.jpg) no-repeat;
         background-size: 160%;
