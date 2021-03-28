@@ -37,6 +37,11 @@ body {
     width: 100%;
 }
 
+.div-logo {
+    min-width: 180px;
+    max-width: 30%;
+}
+
 .menu-mobile {
     background-color: var(--neutral-lightest);
 }
@@ -59,11 +64,12 @@ body {
 .item-menu {
     font-size: 1rem;
     font-family: 'K2D', sans-serif;
+    border-color: 
 }
 
 .form-busca-home {
-    background-color: #fff;
-    padding: 1rem 0 1rem 0;
+    background-color: var(--neutral-lightest);
+    padding: 1rem 5px 1rem 5px;
     border-radius: 20px 20px 20px 20px;
     width: 100%;
 }
@@ -204,19 +210,32 @@ body {
     min-width: 148px;
     height: 44px;
     border-radius: 5px 5px 5px 5px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn-home:hover {
+    opacity: .8;
 }
 
 .diagnostico-btn-home {
     margin-top: 4%;
     margin-bottom: 4%;
-    padding: 1%;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
     height: 44px;
     border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.diagnostico-btn-home:hover {
+    opacity: .8;
 }
 
 .btn-cadastrar-oficina {

@@ -4,9 +4,9 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+                <div class="flex-shrink-0 flex items-center div-logo">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('/img/logo.png') }}" class="d-block img-logo" id="logo" alt="Logo Mecanix">
+                        <img src="{{ asset('/img/logo_horizontal.png') }}" class="d-block img-logo" id="logo" alt="Logo Mecanix">
                     </a>
                 </div>
 
