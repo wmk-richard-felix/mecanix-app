@@ -8,7 +8,7 @@
     <div class="py-12 home-conteudo">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="p-6 sm:px-20 bg-white border-b border-gray-200 busca-home">
+                <div class="p-6 sm:px-16 bg-white border-b border-gray-200 busca-home">
                     <div class="mt-8 text-home1-b">
                         Precisando consertar seu carro?
                     </div>
@@ -16,18 +16,18 @@
                         Busque o profissional certo para seu problema automotivo
                     </div>
 
-                    <div class="mt-6 text-gray-500  mb-12">
+                    <div class="mt-6 text-gray-500 px-2 mb-12">
                         <center>
                             <form action="{{ route('busca-home') }}" method="post" class="form-busca-home">
                                 @csrf
                                 <select required name="categoria" id="categoria" class="form-select busca-home1">
-                                    <option value="">Selecione a categoria..</option>
+                                    <option value="">Selecione a categoria</option>
                                     @foreach ($categorias as $categoria)
                                         <option value="{{$categoria->id}}">{{$categoria->descricao}}</option>
                                     @endforeach
                                 </select>
                                 <select required name="uf" id="uf" class="busca-home2">
-                                    <option value="">Selecione</option>
+                                    <option value="">Estado</option>
                                     @foreach ($estados as $estado)
                                         <option value="{{$estado->uf}}">{{$estado->uf}}</option>
                                     @endforeach
@@ -38,7 +38,9 @@
                                         <option value="{{$cidade->cidade}}">{{$cidade->cidade}}</option>
                                     @endforeach
                                 </select>
-                                <button type="submit" class="submit-btn-home btn-primary btn-full">Buscar</button>
+                                <button type="submit" class="main-action-btn-sm btn-primary btn-full">
+                                    Buscar
+                                </button>
                             </form>
                         </center>
                     </div>
@@ -52,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 sm:px-20 bg-white border-b border-gray-200 my-12">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200 mt-12">
                     <div class="mt-8 text-home1a">
                         Utilize nosso assitente virtual 🤖 para encontrar o problema do seu veículo
                     </div>
@@ -64,12 +66,12 @@
 
                     <center>
                         <a href="{{ url('/diagnostico') }}">
-                            <button class="btn-primary btn-full diagnostico-btn-home">Realizar Diagnóstico</button>
+                            <button class="btn-primary btn-full secondary-action-btn">Realizar Diagnóstico</button>
                         </a>
                     </center>
                 </div>
 
-                <div class="bg-gray-200 bg-opacity-25">
+                <div class="bg-gray-200 bg-opacity-25 pt-4 pb-4">
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l col-12">
                         <h1 class="ml-4 text-lg text-gray-600 leading-7 font-semibold text-home2">Qual especialista deseja encontrar?</h1>
                     </div>
@@ -100,12 +102,12 @@
                             <img src="{{ asset('/img/homem-mecanico.png') }}" alt="Especialista" width="300">
                         </div>
                         <div class="flex items-center">
-                            <div class="text-desc-home-2">
+                            <div class="text-banner text-desc-home-2">
                                 <p>Com o Mecanix seu problema é resolvido mais rápido!</p>
                                 <p>Busque o profissional mais qualificado para te ajudar com seu problema automotivo.</p>
                                 <center>
-                                    <a href="#">
-                                        <button class="btn-primary btn-full diagnostico-btn-home">Buscar Profissionais</button>
+                                    <a href="#" >
+                                        <button class="btn-primary btn-full secondary-action-btn">Buscar Profissionais</button>
                                     </a>
                                 </center>
                             </div>
@@ -113,7 +115,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white-200 bg-opacity-25">
+                <div class="bg-white-200 bg-opacity-25 pt-4">
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l col-12">
                         <h1 class="ml-4 text-lg text-gray-600 leading-7 font-semibold text-home2">Especialistas mais recentes</h1>
                     </div>

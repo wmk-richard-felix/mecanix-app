@@ -1,13 +1,85 @@
+:root {
+    --primary: #f50;
+    --primary-light: #fa7020;
+
+    --secondary: #094971;
+
+    --danger: rgb(201, 41, 41);
+
+    --neutral-darkest: rgba(0,0,0,.6);
+    --neutral-darker: rgb(95, 95, 95);
+    --neutral-dark: rgba(107, 114, 128);
+    --neutral-mid:rgb(153, 153, 153);
+    --neutral-mid-light: #afafaf;
+    --neutral-light: #cbd6dc;
+    --neutral-lightest: #ffffff;  
+    
+}
+  
 body {
     font-family: 'K2D', sans-serif;
 }
+
+
+/* Componenrtes */
+
+.home-conteudo {
+    margin-top: 1rem;
+}
+
+.text-banner {
+    text-align: center;
+    color: var(--secondary) !important;
+}
+
+.main-action-btn-sm {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 43px;
+    min-width: 148px;
+    height: 44px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-action-btn-sm:hover {
+    opacity: .8;
+}
+
+.secondary-action-btn {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    height: 44px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.secondary-action-btn:hover {
+    opacity: .8;
+}
+
+.text-desc-sm {
+    font-size: 1rem;
+}
+
+/* Header */
 
 .header-mecanix {
     margin-top: 6%;
 }
 
 .img-logo {
-    max-width: 30%;
+    min-width: 180px;
+    max-width: 60%;
 }
 
 .nav-mecanix {
@@ -17,23 +89,9 @@ body {
     width: 100%;
 }
 
-.menu-mobile {
-    background-color: #ffffff;
-}
-
-.busca-home {
-    background:
-    linear-gradient(
-      rgba(0,0,0,.6),rgba(0,0,0,.6)
-    ),
-    url(/img/img-home.jpg) no-repeat;
-    background-size: 100%;
-    padding-bottom: 8rem;
-    padding-top: 2rem;
-}
-
-.busca-home::after {
-    background-color:rgba(0,0,0,.6);
+.div-logo {
+    min-width: 180px;
+    max-width: 30%;
 }
 
 .item-menu {
@@ -41,16 +99,37 @@ body {
     font-family: 'K2D', sans-serif;
 }
 
+.menu-mobile {
+    background-color: var(--neutral-lightest);
+}
+
+/* Home */
+
+.busca-home {
+    background:
+    linear-gradient(
+      var(--neutral-darkest),var(--neutral-darkest)
+    ),
+    url(/img/img-home.jpg) no-repeat;
+    background-size: 100%;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.busca-home::after {
+    background-color:var(--neutral-darkest);
+}
+
+
+
 .form-busca-home {
-    background-color: #fff;
-    padding: 1rem 0 1rem 0;
+    background-color: var(--neutral-lightest);
+    padding: .5rem 5px;
     border-radius: 20px 20px 20px 20px;
     width: 100%;
 }
 
-.home-conteudo {
-    margin-top: 1rem;
-}
+
 
 .diagnostico-conteudo {
     margin-top: 2.5rem;
@@ -61,7 +140,7 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
-    color: #fff;
+    color: var(--neutral-lightest);
 }
 
 .text-home1a {
@@ -77,7 +156,7 @@ body {
     font-size: 3.2rem;
     line-height: 2rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--neutral-lightest);
     font-family: Arial, Helvetica, sans-serif !important;
 }
 
@@ -85,7 +164,7 @@ body {
     text-align: center;
     font-size: 1.15rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--neutral-lightest);
 }
 
 .text-home1-d {
@@ -94,120 +173,71 @@ body {
     font-weight: 600;
     text-decoration: underline;
     margin-top: 1rem;
-    color: #fa7020;
+    color: var(--primary-light);
 }
 
 .text-home2 {
     font-size: 1.5rem;
+    
 }
 
 .text-desc-home-1 {
     text-align: center;
-    color: rgba(107, 114, 128);
+    color: var(--neutral-dark);
     padding: 0 20% 0 20%;
 }
 
 .text-desc-home-2 {
-    text-align: center;
-    color: #f50;
     padding-right: 20%;
-    font-size: 1.8rem;
-    font-weight: 800;
-}
-
-.text-desc-cadastro-oficina {
-    text-align: center;
-    color: #929292;
-    padding-right: 20%;
-    font-size: 1.3rem;
-    font-weight: 800;
-}
-
-.text-desc-cadastro-oficina2 {
-    text-align: center;
-    color: #929292;
     font-size: 1.6rem;
-    font-weight: 800;
+    font-weight: 600;
+}
+
+.busca-home1,
+.busca-home2,
+.busca-home3 {
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 148px;
+    height: 44px;
+    overflow: scroll;
+    top: auto;
+    bottom: 40px;
+    border-color: var(--neutral-mid-light);
 }
 
 .busca-home1 {
-    width: 45%;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 148px;
-    height: 44px;
-    overflow: scroll;
-    top: auto;
-    bottom: 40px;
-    border-color: #afafaf;
+    width: 40%;
 }
 
 .busca-home2 {
-    width: 10%;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 148px;
-    height: 44px;
-    overflow: scroll;
-    top: auto;
-    bottom: 40px;
-    border-color: #afafaf;
+    width: 10%;   
 }
 
 .busca-home3 {
-    width: 25%;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 148px;
-    height: 44px;
-    overflow: scroll;
-    top: auto;
-    bottom: 40px;
-    border-color: #afafaf;
+    width: 30%;
 }
 
-.submit-btn-home {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 43px;
-    min-width: 148px;
-    height: 44px;
-    border-radius: 5px 5px 5px 5px;
-    background-color: #f50!important;
-    color: #ffffff;
+/* Cadastro Oficina */
+
+.text-desc-cadastro-oficina {
+    padding-right: 7%;
+    padding-left: 7%;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-.diagnostico-btn-home {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    padding: 1%;
-    font-size: 16px;
-    height: 44px;
-    border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+.text-desc-cadastro-oficina2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 7%;
 }
 
-.btn-cadastrar-oficina {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    padding: 1%;
-    font-size: 26px;
-    height: 70px;
-    width: 20rem;
-    border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
-}
+
+/* Busca Oficina */
 
 .btn-busca-oficinas {
     margin-top: 4%;
@@ -217,8 +247,8 @@ body {
     height: 40px;
     width: 10rem;
     border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
 }
 
 .btn-lista-oficinas-cadastrar {
@@ -227,8 +257,8 @@ body {
     height: 44px;
     width: 200px;
     border-radius: 10px 10px 10px 10px;
-    background-color: #f50!important;
-    color: #ffffff;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
     font-weight: 500;
 }
 
@@ -238,8 +268,8 @@ body {
     height: 44px;
     width: 160px;
     border-radius: 10px 10px 10px 10px;
-    background-color: rgb(153, 153, 153)!important;
-    color: #ffffff;
+    background-color: var(--neutral-mid)!important;
+    color: var(--neutral-lightest);
 }
 
 .btn-lista-oficinas-excluir {
@@ -248,15 +278,15 @@ body {
     height: 44px;
     width: 160px;
     border-radius: 10px 10px 10px 10px;
-    background-color: rgb(201, 41, 41)!important;
-    color: #ffffff;
+    background-color: var(--danger)!important;
+    color: var(--neutral-lightest);
     margin-left: 1rem;
 }
 
 .box-category {
     padding: 1rem;
     text-align: center;
-    border: 1px solid #cbd6dc;
+    border: 1px solid var(--neutral-light);
     box-sizing: border-box;
     border-radius: 12px;
     overflow: hidden;
@@ -267,20 +297,20 @@ body {
 .text-category-home {
     margin-top: 12px;
     font-size: 1rem;
-    color: rgb(95, 95, 95);
+    color: var(--neutral-darker);
 }
 
 .text-oficina-nome-home {
     margin-top: 12px;
     font-size: 1rem;
-    color: rgb(95, 95, 95);
+    color: var(--neutral-darker);
     font-weight: 600;
 }
 
 .text-oficina-cidade-home {
     margin-top: 12px;
     font-size: 1rem;
-    color: rgb(95, 95, 95);
+    color: var(--neutral-darker);
 }
 
 .especialista-home {
@@ -367,7 +397,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 /*Mobile*/
-@media (max-width: 767.98px) {
+@media (max-width: 802px) {
     .especialista-home {
         padding-left: 10%;
     }
@@ -382,7 +412,7 @@ input[type=checkbox], input[type=radio] {
 
     .text-desc-home-2 {
         text-align: center;
-        color: #f50;
+        color: var(--secondary);
         font-size: 1.8rem;
         font-weight: 800;
         padding: 7%;
@@ -396,10 +426,7 @@ input[type=checkbox], input[type=radio] {
         margin-left: 0px;
     }
     
-    .text-desc-cadastro-oficina {
-        padding: 5%;
-    }
-
+    .text-desc-cadastro-oficina,
     .text-desc-cadastro-oficina2 {
         padding: 5%;
     }
@@ -408,22 +435,10 @@ input[type=checkbox], input[type=radio] {
         padding-top: 3rem;
     }
 
-    .grid-cols-2 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-
-    .grid-cols-3 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-
-    .grid-cols-4 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-
-    .grid-cols-5 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4,
+    .grid-cols-5,
     .grid-cols-6 {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
@@ -440,12 +455,12 @@ input[type=checkbox], input[type=radio] {
     .busca-home {
         background:
         linear-gradient(
-          rgba(0,0,0,.6),rgba(0,0,0,.6)
+            var(--neutral-darkest),var(--neutral-darkest)
         ),
         url(/img/img-home-mobile.jpg) no-repeat;
         background-size: 160%;
-        padding-bottom: 8rem;
-        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
     }
 
     .text-home1-b {
@@ -453,14 +468,8 @@ input[type=checkbox], input[type=radio] {
         line-height: 2.9rem;
     }
 
-    .busca-home1 {
-        width: 90%;
-    }
-
-    .busca-home2 {
-        width: 90%;
-    }
-
+    .busca-home1,
+    .busca-home2,
     .busca-home3 {
         width: 90%;
     }
