@@ -21,6 +21,58 @@ body {
 }
 
 
+/* Componenrtes */
+
+.home-conteudo {
+    margin-top: 1rem;
+}
+
+.text-banner {
+    text-align: center;
+    color: var(--secondary) !important;
+}
+
+.main-action-btn-sm {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 43px;
+    min-width: 148px;
+    height: 44px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-action-btn-sm:hover {
+    opacity: .8;
+}
+
+.secondary-action-btn {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    height: 44px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--primary)!important;
+    color: var(--neutral-lightest);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.secondary-action-btn:hover {
+    opacity: .8;
+}
+
+.text-desc-sm {
+    font-size: 1rem;
+}
+
+/* Header */
+
 .header-mecanix {
     margin-top: 6%;
 }
@@ -42,9 +94,16 @@ body {
     max-width: 30%;
 }
 
+.item-menu {
+    font-size: 1rem;
+    font-family: 'K2D', sans-serif;
+}
+
 .menu-mobile {
     background-color: var(--neutral-lightest);
 }
+
+/* Home */
 
 .busca-home {
     background:
@@ -53,38 +112,27 @@ body {
     ),
     url(/img/img-home.jpg) no-repeat;
     background-size: 100%;
-    padding-bottom: 8rem;
-    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 .busca-home::after {
     background-color:var(--neutral-darkest);
 }
 
-.item-menu {
-    font-size: 1rem;
-    font-family: 'K2D', sans-serif;
-    border-color: 
-}
+
 
 .form-busca-home {
     background-color: var(--neutral-lightest);
-    padding: 1rem 5px 1rem 5px;
+    padding: .5rem 5px;
     border-radius: 20px 20px 20px 20px;
     width: 100%;
 }
 
-.home-conteudo {
-    margin-top: 1rem;
-}
+
 
 .diagnostico-conteudo {
     margin-top: 2.5rem;
-}
-
-.text-banner {
-    text-align: center;
-    color: var(--secondary) !important;
 }
 
 .text-home1 {
@@ -141,114 +189,55 @@ body {
 
 .text-desc-home-2 {
     padding-right: 20%;
-    font-size: 1.8rem;
-    font-weight: 800;
-}
-
-.text-desc-cadastro-oficina {
-    padding-right: 10%;
-    padding-left: 10%;
-    font-size: 1.3rem;
-    font-weight: 800;
-}
-
-.text-desc-cadastro-oficina2 {
     font-size: 1.6rem;
-    font-weight: 800;
-    padding-left: 10%;
+    font-weight: 600;
+}
+
+.busca-home1,
+.busca-home2,
+.busca-home3 {
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 148px;
+    height: 44px;
+    overflow: scroll;
+    top: auto;
+    bottom: 40px;
+    border-color: var(--neutral-mid-light);
 }
 
 .busca-home1 {
-    width: 45%;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 148px;
-    height: 44px;
-    overflow: scroll;
-    top: auto;
-    bottom: 40px;
-    border-color: var(--neutral-mid-light);
+    width: 40%;
 }
 
 .busca-home2 {
-    width: 10%;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 148px;
-    height: 44px;
-    overflow: scroll;
-    top: auto;
-    bottom: 40px;
-    border-color: var(--neutral-mid-light);
+    width: 10%;   
 }
 
 .busca-home3 {
-    width: 25%;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 148px;
-    height: 44px;
-    overflow: scroll;
-    top: auto;
-    bottom: 40px;
-    border-color: var(--neutral-mid-light);
+    width: 30%;
 }
 
-.submit-btn-home {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 43px;
-    min-width: 148px;
-    height: 44px;
-    border-radius: 5px 5px 5px 5px;
-    background-color: var(--primary)!important;
-    color: var(--neutral-lightest);
-    transition-duration: 150ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+/* Cadastro Oficina */
+
+.text-desc-cadastro-oficina {
+    padding-right: 7%;
+    padding-left: 7%;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-.submit-btn-home:hover {
-    opacity: .8;
+.text-desc-cadastro-oficina2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 7%;
 }
 
-.diagnostico-btn-home {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 16px;
-    height: 44px;
-    border-radius: 10px 10px 10px 10px;
-    background-color: var(--primary)!important;
-    color: var(--neutral-lightest);
-    transition-duration: 150ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.diagnostico-btn-home:hover {
-    opacity: .8;
-}
-
-.btn-cadastrar-oficina {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    padding: 1%;
-    font-size: 26px;
-    height: 70px;
-    width: 20rem;
-    border-radius: 10px 10px 10px 10px;
-    background-color: var(--primary)!important;
-    color: var(--neutral-lightest);
-}
+/* Busca Oficina */
 
 .btn-busca-oficinas {
     margin-top: 4%;
@@ -408,7 +397,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 /*Mobile*/
-@media (max-width: 767.98px) {
+@media (max-width: 802px) {
     .especialista-home {
         padding-left: 10%;
     }
@@ -470,8 +459,8 @@ input[type=checkbox], input[type=radio] {
         ),
         url(/img/img-home-mobile.jpg) no-repeat;
         background-size: 160%;
-        padding-bottom: 8rem;
-        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
     }
 
     .text-home1-b {

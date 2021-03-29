@@ -8,7 +8,7 @@
     <div class="py-12 home-conteudo">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="p-6 sm:px-20 bg-white border-b border-gray-200 busca-home">
+                <div class="p-6 sm:px-16 bg-white border-b border-gray-200 busca-home">
                     <div class="mt-8 text-home1-b">
                         Precisando consertar seu carro?
                     </div>
@@ -38,7 +38,7 @@
                                         <option value="{{$cidade->cidade}}">{{$cidade->cidade}}</option>
                                     @endforeach
                                 </select>
-                                <button type="submit" class="submit-btn-home btn-primary btn-full">
+                                <button type="submit" class="main-action-btn-sm btn-primary btn-full">
                                     Buscar
                                 </button>
                             </form>
@@ -66,7 +66,7 @@
 
                     <center>
                         <a href="{{ url('/diagnostico') }}">
-                            <button class="btn-primary btn-full diagnostico-btn-home">Realizar Diagnóstico</button>
+                            <button class="btn-primary btn-full secondary-action-btn">Realizar Diagnóstico</button>
                         </a>
                     </center>
                 </div>
@@ -106,8 +106,8 @@
                                 <p>Com o Mecanix seu problema é resolvido mais rápido!</p>
                                 <p>Busque o profissional mais qualificado para te ajudar com seu problema automotivo.</p>
                                 <center>
-                                    <a href="#">
-                                        <button class="btn-primary btn-full diagnostico-btn-home">Buscar Profissionais</button>
+                                    <a href="#" >
+                                        <button class="btn-primary btn-full secondary-action-btn">Buscar Profissionais</button>
                                     </a>
                                 </center>
                             </div>
