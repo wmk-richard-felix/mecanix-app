@@ -29,7 +29,14 @@ class IndexController extends Controller
         $categoria = $request->categoria;
         $uf = $request->uf;
         $cidade = $request->cidade;
-
+        /*
+         * SELECT oficinas.*, categorias.id FROM oficinas
+         * INNER JOIN categoria_oficinas ON categoria_oficinas.codigo_oficina = oficinas.id
+         * INNER JOIN categorias ON categorias.id = categoria_oficinas.codigo_categoria
+         * WHERE oficinas.uf = $uf
+         * AND oficinas.cidade = $cidade
+         * AND categorias.id = $id
+         */
         if ($cidade != ""):
             // Todos os campos preenchidos
             $oficinas = DB::table('oficinas')
@@ -51,7 +58,26 @@ class IndexController extends Controller
             ->get();
         endif;
 
-        return view('pages.retorno-busca')->with('oficinas', $oficinas);
+        $categorias_oficina = [];
+        foreach ($oficinas as $oficina):
+            /*
+             * SELECT categorias.descricao, categoria_oficinas.codigo_oficina 
+             * FROM categorias 
+             * INNER JOIN categoria_oficinas ON categoria_oficinas.codigo_categoria = categorias.id 
+             * WHERE categoria_oficinas.codigo_oficina = $id
+             */
+            $categorias = DB::table('categorias')
+            ->join('categoria_oficinas', 'categoria_oficinas.codigo_categoria' , '=', 'categorias.id') 
+            ->select('categorias.descricao', 'categoria_oficinas.codigo_oficina')
+            ->where('categoria_oficinas.codigo_oficina', $oficina->id)
+            ->take(5)
+            ->get();
+            foreach ($categorias as $categoria):
+                array_push($categorias_oficina, $categoria);
+            endforeach;
+        endforeach;
+
+        return view('pages.retorno-busca')->with('oficinas', $oficinas)->with('categorias', $categorias_oficina);
     }
 
     public function BuscaUrl(Request $request)

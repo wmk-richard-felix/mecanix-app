@@ -25,6 +25,13 @@
                                 <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3">
                                     <p class="nome-ret-busca">{{ $oficina->nome_fantasia }}</p>
                                     <p class="desc-ret-busca">{{ $oficina->cidade .' - '. $oficina->uf }}</p>
+                                    <ul>
+                                        @foreach ($categorias as $categoria)
+                                        @if($categoria->codigo_oficina == $oficina->id)
+                                            <li>{{ $categoria->descricao }}</li>
+                                        @endif
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                         </div>
