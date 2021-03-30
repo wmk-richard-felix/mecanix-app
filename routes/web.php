@@ -23,6 +23,7 @@ Route::get('diagnostico', function () {
 //======================
 Route::get('/', 'App\Http\Controllers\IndexController@Index')->name('home');
 Route::post('/retorno-busca', 'App\Http\Controllers\IndexController@RealizaBusca')->name('busca-home');
+Route::post('/retorno-busca-filtro', 'App\Http\Controllers\BuscaController@RealizaFiltro')->name('filtro-busca');
 
 //======================
 // Busca

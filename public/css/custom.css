@@ -396,6 +396,47 @@ input[type=checkbox], input[type=radio] {
     padding-top: 3rem !important;
 }
 
+.box-especialista ul li {
+    background-color: #a5a5a5;
+    float: left;
+    padding: 5px 15px;
+    list-style: none;
+    margin-right: 10px;
+    border-radius: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.nome-ret-busca {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.tit-ret-busca {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.desc-ret-busca {
+    font-weight: 600;
+}
+
+.check-busca {
+    margin-left: 20px;
+    position: inherit;
+}
+
+.busca-filtrar {
+    width: 15rem;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.pos-inh {
+    position: inherit;
+}
+
 /*Mobile*/
 @media (max-width: 802px) {
     .especialista-home {

@@ -25,10 +25,19 @@ class IndexController extends Controller
 
     public function RealizaBusca(Request $request)
     {
+        $todas_categorias = categoria::all();
+        $estados =  DB::table('oficinas')->select('uf')->orderBy('uf')->distinct()->get();
+        $cidades =  DB::table('oficinas')->select('cidade')->orderBy('cidade')->distinct()->get();
+
+        // Busca as oficinas
         $oficinas = [];
         $categoria = $request->categoria;
         $uf = $request->uf;
         $cidade = $request->cidade;
+
+        $cidades_sels = [$cidade];
+        $estados_sels = [$uf];
+        $cat_sels = [$categoria];
         /*
          * SELECT oficinas.*, categorias.id FROM oficinas
          * INNER JOIN categoria_oficinas ON categoria_oficinas.codigo_oficina = oficinas.id
@@ -58,6 +67,7 @@ class IndexController extends Controller
             ->get();
         endif;
 
+        // Busca as categorias das oficinas
         $categorias_oficina = [];
         foreach ($oficinas as $oficina):
             /*
@@ -77,7 +87,15 @@ class IndexController extends Controller
             endforeach;
         endforeach;
 
-        return view('pages.retorno-busca')->with('oficinas', $oficinas)->with('categorias', $categorias_oficina);
+        return view('pages.retorno-busca')
+            ->with('oficinas', $oficinas)
+            ->with('categorias', $categorias_oficina)
+            ->with('estados', $estados)
+            ->with('cidades', $cidades)
+            ->with('cidades_sels', $cidades_sels)
+            ->with('estados_sels', $estados_sels)
+            ->with('cat_sels', $cat_sels)
+            ->with('todas_categorias', $todas_categorias);
     }
 
     public function BuscaUrl(Request $request)

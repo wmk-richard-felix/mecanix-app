@@ -11,7 +11,34 @@
                 <div class="grid grid-cols-4 gap-4">
                     <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
                         <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3">
-                            Filtro
+                            <form action="{{ route('filtro-busca') }}" method="post">
+                                @csrf
+                                <p class="tit-ret-busca">Refine sua busca</p>
+                                <p class="desc-ret-busca">Estado</p>
+                                @foreach ($estados as $estado)
+                                <div class="check-busca">
+                                    <input type="checkbox" name="estados[]" id="{{ $estado->uf }}" value="{{ $estado->uf }}" class="custom-control-input pos-inh" @if(in_array($estado->uf, $estados_sels)) checked @endif>
+                                    <label for="{{ $estado->uf }}" class="custom-control-label pos-inh">{{ $estado->uf }}</label>
+                                </div>                                
+                                @endforeach
+                                <br>
+                                <p class="desc-ret-busca">Cidade</p>
+                                @foreach ($cidades as $cidade)
+                                <div class="check-busca">
+                                    <input type="checkbox" name="cidades[]" id="{{ $cidade->cidade }}" value="{{ $cidade->cidade }}" class="custom-control-input pos-inh" @if(in_array($cidade->cidade, $cidades_sels)) checked @endif>
+                                    <label for="{{ $cidade->cidade }}" class="custom-control-label pos-inh">{{ $cidade->cidade }}</label>
+                                </div>                                
+                                @endforeach
+                                <br>
+                                <p class="desc-ret-busca">Categoria</p>
+                                @foreach ($todas_categorias as $categoria)
+                                <div class="check-busca">
+                                    <input type="checkbox" name="categorias[]" id="{{$categoria->descricao}}" value="{{$categoria->id}}" class="custom-control-input pos-inh" @if(in_array($categoria->id, $cat_sels)) checked @endif>
+                                    <label for="{{$categoria->descricao}}" class="custom-control-label pos-inh">{{$categoria->descricao}}</label>
+                                </div>
+                                @endforeach
+                                <input type="submit" class="btn-primary btn-full secondary-action-btn busca-filtrar" value="Filtrar">
+                            </form>
                         </div>
                     </div>
                     <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3">
@@ -22,7 +49,7 @@
                                 <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
                                     <img src="{{ asset('img/logotipos/'.$oficina->logo) }}" alt="" width="200">
                                 </div>
-                                <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3">
+                                <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3 box-especialista">
                                     <p class="nome-ret-busca">{{ $oficina->nome_fantasia }}</p>
                                     <p class="desc-ret-busca">{{ $oficina->cidade .' - '. $oficina->uf }}</p>
                                     <ul>
