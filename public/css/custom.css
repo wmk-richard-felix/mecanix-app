@@ -446,6 +446,10 @@ input[type=checkbox], input[type=radio] {
     display: none;
 }
 
+.logo-retorno-busca {
+    margin: auto;
+}
+
 /*Mobile*/
 @media (max-width: 802px) {
     .especialista-home {
@@ -541,5 +545,14 @@ input[type=checkbox], input[type=radio] {
         height: 3rem;
         width: 90%;
         margin-left: 6%;
+    }
+
+    .nome-ret-busca {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .desc-ret-busca {
+        margin-left: 10px;
     }
 }

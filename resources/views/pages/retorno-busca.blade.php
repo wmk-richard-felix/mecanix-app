@@ -57,7 +57,7 @@
                         <div class="bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3 card-oficina">
                             <div class="grid grid-cols-4">
                                 <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
-                                    <img src="{{ asset('img/logotipos/'.$oficina->logo) }}" alt="" width="200">
+                                    <img src="{{ asset('img/logotipos/'.$oficina->logo) }}" alt="Logo {{$oficina->nome_fantasia}}" width="200" class="logo-retorno-busca">
                                 </div>
                                 <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3 box-especialista">
                                     <p class="nome-ret-busca">{{ $oficina->nome_fantasia }}</p>
