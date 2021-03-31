@@ -7,9 +7,19 @@
 
     <div>
         <div class="max-w-7xl mx-auto pb-10 sm:px-6 lg:px-8 col-span-3 sm:col-span-4">
-            <div class="mt-5 md:mt-0 md:col-span-2">
+            <div class="oficinas-encontradas">
+                @if(count($oficinas)>1)
+                Foram encontradas {{ count($oficinas) }} oficinas na sua busca
+                @else
+                Foi encontrada {{ count($oficinas) }} oficina na sua busca
+                @endif
+            </div>
+            <div class="btn-refinar-busca">
+                <a href="#"><button class="btn-primary btn-full secondary-action-btn btn-refinar-busca-1">Refinar busca</button></a>
+            </div>
+            <div class="mt-2 md:mt-0 md:col-span-2">
                 <div class="grid grid-cols-4 gap-4">
-                    <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
+                    <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1 filtro-busca">
                         <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3">
                             <form action="{{ route('filtro-busca') }}" method="post">
                                 @csrf
@@ -44,7 +54,7 @@
                     <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3">
                         @if(count($oficinas) > 0)
                         @foreach ($oficinas as $oficina)
-                        <div class="bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3">
+                        <div class="bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3 card-oficina">
                             <div class="grid grid-cols-4">
                                 <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
                                     <img src="{{ asset('img/logotipos/'.$oficina->logo) }}" alt="" width="200">

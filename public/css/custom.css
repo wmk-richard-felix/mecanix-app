@@ -397,7 +397,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .box-especialista ul li {
-    background-color: #a5a5a5;
+    background-color: #094971;
     float: left;
     padding: 5px 15px;
     list-style: none;
@@ -435,6 +435,15 @@ input[type=checkbox], input[type=radio] {
 
 .pos-inh {
     position: inherit;
+}
+
+.oficinas-encontradas {
+    margin: 10px;
+    font-size: 1.4rem;
+}
+
+.btn-refinar-busca {
+    display: none;
 }
 
 /*Mobile*/
@@ -513,5 +522,24 @@ input[type=checkbox], input[type=radio] {
     .busca-home2,
     .busca-home3 {
         width: 90%;
+    }
+
+    .filtro-busca {
+        display: none;
+    }
+
+    .card-oficina {
+        margin: 5%;
+        padding: 5%;
+    }
+
+    .btn-refinar-busca {
+        display: block;
+    }
+
+    .btn-refinar-busca-1 {
+        height: 3rem;
+        width: 90%;
+        margin-left: 6%;
     }
 }
