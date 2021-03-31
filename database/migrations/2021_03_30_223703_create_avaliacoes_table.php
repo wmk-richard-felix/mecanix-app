@@ -18,11 +18,13 @@ class CreateAvaliacoesTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('codigo_oficina');
             $table->unsignedBigInteger('codigo_usuario');
+            $table->unsignedBigInteger('codigo_atendimento');
             $table->integer('estrelas');
             $table->string('comentario');
 
             $table->foreign('codigo_oficina')->references('id')->on('oficinas');
             $table->foreign('codigo_usuario')->references('id')->on('users');
+            $table->foreign('codigo_atendimento')->references('id')->on('atendimentos');
         });
     }
 
