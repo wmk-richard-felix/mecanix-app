@@ -122,11 +122,13 @@
 
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l grid grid-cols-4">
                         @foreach ($oficinas as $oficina)
+                        <a href="{{ url('/oficinas'.'/'.($cryptKey * $oficina->id)) }}">
                             <div class="col-md-6 col-lg-6 col-sm-12 box-category">
                                 <img src="{{ asset('/img/logotipos/'.$oficina->logo) }}" alt="Logotipo" width="310">
                                 <p class="text-oficina-nome-home">{{ $oficina->nome_fantasia }}</p>
                                 <p class="text-oficina-cidade-home">{{ $oficina->cidade }} - {{ $oficina->uf }}</p>
                             </div>
+                        </a>
                         @endforeach
                     </div>
                 </div>

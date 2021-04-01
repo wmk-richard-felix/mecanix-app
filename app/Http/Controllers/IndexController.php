@@ -11,6 +11,7 @@ class IndexController extends Controller
 {
     public function Index()
     {
+        $cryptKey = '99123456789';
         $categorias = DB::table('categorias')->select('id','descricao')->orderBy('descricao')->get();
         $estados =  DB::table('oficinas')->select('uf')->orderBy('uf')->distinct()->get();
         $cidades =  DB::table('oficinas')->select('cidade')->orderBy('cidade')->distinct()->get();
@@ -20,6 +21,7 @@ class IndexController extends Controller
             ->with('categorias', $categorias)
             ->with('estados', $estados)
             ->with('cidades', $cidades)
+            ->with('cryptKey', $cryptKey)
             ->with('oficinas', $oficinas);
     }
 
