@@ -39,7 +39,7 @@
                                     @endforeach
                                 </select>
                                 <button type="submit" class="main-action-btn-sm btn-primary btn-full">
-                                    Buscar
+                                    <i class="fas fa-search"></i>  Buscar
                                 </button>
                             </form>
                         </center>

@@ -25,6 +25,7 @@ class IndexController extends Controller
 
     public function RealizaBusca(Request $request)
     {
+        $cryptKey = '99123456789';
         $todas_categorias = categoria::all();
         $estados =  DB::table('oficinas')->select('uf')->orderBy('uf')->distinct()->get();
         $cidades =  DB::table('oficinas')->select('cidade')->orderBy('cidade')->distinct()->get();
@@ -95,7 +96,8 @@ class IndexController extends Controller
             ->with('cidades_sels', $cidades_sels)
             ->with('estados_sels', $estados_sels)
             ->with('cat_sels', $cat_sels)
-            ->with('todas_categorias', $todas_categorias);
+            ->with('todas_categorias', $todas_categorias)
+            ->with('cryptKey', $cryptKey);
     }
 
     public function BuscaUrl(Request $request)

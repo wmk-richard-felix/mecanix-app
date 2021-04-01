@@ -54,24 +54,26 @@
                     <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3">
                         @if(count($oficinas) > 0)
                         @foreach ($oficinas as $oficina)
-                        <div class="bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3 card-oficina">
-                            <div class="grid grid-cols-4">
-                                <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
-                                    <img src="{{ asset('img/logotipos/'.$oficina->logo) }}" alt="Logo {{$oficina->nome_fantasia}}" width="200" class="logo-retorno-busca">
-                                </div>
-                                <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3 box-especialista">
-                                    <p class="nome-ret-busca">{{ $oficina->nome_fantasia }}</p>
-                                    <p class="desc-ret-busca">{{ $oficina->cidade .' - '. $oficina->uf }}</p>
-                                    <ul>
-                                        @foreach ($categorias as $categoria)
-                                        @if($categoria->codigo_oficina == $oficina->id)
-                                            <li>{{ $categoria->descricao }}</li>
-                                        @endif
-                                        @endforeach
-                                    </ul>
+                        <a href="{{ url('/oficinas').'/'.($cryptKey * $oficina->id) }}">
+                            <div class="bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md mb-3 card-oficina">
+                                <div class="grid grid-cols-4">
+                                    <div class="col-span-1 sm:col-span-4 md:col-span-1 lg:col-span-1">
+                                        <img src="{{ asset('img/logotipos/'.$oficina->logo) }}" alt="Logo {{$oficina->nome_fantasia}}" width="200" class="logo-retorno-busca">
+                                    </div>
+                                    <div class="col-span-3 sm:col-span-4 md:col-span-3 lg:col-span-3 box-especialista">
+                                        <p class="nome-ret-busca">{{ $oficina->nome_fantasia }}</p>
+                                        <p class="desc-ret-busca">{{ $oficina->cidade .' - '. $oficina->uf }}</p>
+                                        <ul>
+                                            @foreach ($categorias as $categoria)
+                                            @if($categoria->codigo_oficina == $oficina->id)
+                                                <li>{{ $categoria->descricao }}</li>
+                                            @endif
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         @endforeach
                         @else
                         <h1>Nenhuma oficina foi encontrada</h1>

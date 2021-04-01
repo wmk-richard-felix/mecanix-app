@@ -408,6 +408,18 @@ input[type=checkbox], input[type=radio] {
     margin-top: 10px;
 }
 
+.box-pag-oficina ul li {
+    background-color: #094971;
+    float: left;
+    padding: 5px 15px;
+    list-style: none;
+    margin-right: 10px;
+    border-radius: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .nome-ret-busca {
     font-size: 1.4rem;
     font-weight: 600;
@@ -448,6 +460,38 @@ input[type=checkbox], input[type=radio] {
 
 .logo-retorno-busca {
     margin: auto;
+}
+
+.titulo-oficina {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.desc-pag-oficina {
+    font-size: 1.1rem;
+    margin-top: 1%;
+}
+
+.contato-oficina {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 8%;
+}
+
+.sobre-oficina {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn-agendar-atendimento {
+    width: 70%;
+    font-size: 1.3rem;
+    margin-top: 8%;
+}
+
+.info-oficina {
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 /*Mobile*/
@@ -554,5 +598,18 @@ input[type=checkbox], input[type=radio] {
 
     .desc-ret-busca {
         margin-left: 10px;
+    }
+
+    .logo-pag-oficina {
+        margin: auto;
+    }
+
+    .box-pag-oficina {
+        margin: 5%;
+        padding: 5%;
+    }
+    
+    .btn-agendar-atendimento {
+        width: 100%;
     }
 }

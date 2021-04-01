@@ -11,7 +11,7 @@ class BuscaController extends Controller
 {
     public function RealizaFiltro(Request $request)
     {
-
+        $cryptKey = '99123456789';
         $todas_categorias = categoria::all();
         $estados =  DB::table('oficinas')->select('uf')->orderBy('uf')->distinct()->get();
         $cidades =  DB::table('oficinas')->select('cidade')->orderBy('cidade')->distinct()->get();
@@ -59,6 +59,7 @@ class BuscaController extends Controller
             ->with('cidades_sels', $request->cidades)
             ->with('estados_sels', $request->estados)
             ->with('cat_sels', $request->categorias)
-            ->with('todas_categorias', $todas_categorias);
+            ->with('todas_categorias', $todas_categorias)
+            ->with('cryptKey', $cryptKey);
     }
 }

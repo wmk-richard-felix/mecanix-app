@@ -30,6 +30,10 @@ Route::post('/retorno-busca-filtro', 'App\Http\Controllers\BuscaController@Reali
 //======================
 Route::get('/busca-assistente', 'App\Http\Controllers\IndexController@BuscaUrl')->name('busca-assistente');
 
+//======================
+// Página da oficina
+//======================
+Route::get('/oficinas/{id}', 'App\Http\Controllers\OficinaController@view')->name('visualizar-oficina');
 
 //=======================
 // Paginas autenticadas
