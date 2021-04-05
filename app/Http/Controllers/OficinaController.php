@@ -7,6 +7,7 @@ use App\Models\oficina;
 use App\Models\categoria;
 use App\Models\categoria_oficina;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\DB;
 
 class OficinaController extends Controller
 {
@@ -165,5 +166,21 @@ class OficinaController extends Controller
         endforeach;
         
         return redirect(url('/cadastrar-oficina?saved=ok'));
+    }
+
+    public function view($idPar)
+    {
+        $id = $idPar / 99123456789;
+        $oficina = oficina::find($id);
+
+        $categorias = DB::table('categorias')
+        ->join('categoria_oficinas', 'categoria_oficinas.codigo_categoria' , '=', 'categorias.id') 
+        ->select('categorias.descricao', 'categoria_oficinas.codigo_oficina')
+        ->where('categoria_oficinas.codigo_oficina', $oficina->id)
+        ->get();
+
+        return view('pages.oficina')
+        ->with('oficina', $oficina)
+        ->with('categorias', $categorias);
     }
 }

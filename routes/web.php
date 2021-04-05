@@ -23,12 +23,17 @@ Route::get('diagnostico', function () {
 //======================
 Route::get('/', 'App\Http\Controllers\IndexController@Index')->name('home');
 Route::post('/retorno-busca', 'App\Http\Controllers\IndexController@RealizaBusca')->name('busca-home');
+Route::post('/retorno-busca-filtro', 'App\Http\Controllers\BuscaController@RealizaFiltro')->name('filtro-busca');
 
 //======================
 // Busca
 //======================
 Route::get('/busca-assistente', 'App\Http\Controllers\IndexController@BuscaUrl')->name('busca-assistente');
 
+//======================
+// Página da oficina
+//======================
+Route::get('/oficinas/{id}', 'App\Http\Controllers\OficinaController@view')->name('visualizar-oficina');
 
 //=======================
 // Paginas autenticadas
