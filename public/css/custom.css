@@ -494,6 +494,10 @@ input[type=checkbox], input[type=radio] {
     margin-top: 20px;
 }
 
+.item-fil-busca {
+    font-size: 1.2rem;
+}
+
 /*Mobile*/
 @media (max-width: 802px) {
     .especialista-home {
@@ -598,6 +602,11 @@ input[type=checkbox], input[type=radio] {
 
     .desc-ret-busca {
         margin-left: 10px;
+    }
+
+    .desc-fil-busca {
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 
     .logo-pag-oficina {
