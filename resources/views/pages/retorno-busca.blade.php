@@ -15,7 +15,7 @@
                 @endif
             </div>
             <div class="btn-refinar-busca">
-                <a href="#"><button class="btn-primary btn-full secondary-action-btn btn-refinar-busca-1">Refinar busca</button></a>
+                <a href="{{route('refinar-busca')}}"><button class="btn-primary btn-full secondary-action-btn btn-refinar-busca-1">Refinar busca</button></a>
             </div>
             <div class="mt-2 md:mt-0 md:col-span-2">
                 <div class="grid grid-cols-4 gap-4">
