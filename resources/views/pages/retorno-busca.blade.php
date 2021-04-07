@@ -9,7 +9,20 @@
         <div class="max-w-7xl mx-auto pb-10 sm:px-6 lg:px-8 col-span-3 sm:col-span-4">
             <div class="oficinas-encontradas">
                 @if(count($oficinas)>1)
-                Foram encontradas {{ count($oficinas) }} oficinas na sua busca
+                    Foram encontradas {{ count($oficinas) }} oficinas na sua busca
+                @elseif(count($oficinas)==0)
+                    @if(count($categorias))
+                        Não foi encontrada nenhuma oficina na sua busca
+                    @else
+                        Selecione pelo menos uma categoria
+                        <script>
+                            Swal.fire(
+                                'Selecione ao menos uma categoria',
+                                'Para realizar a sua busca',
+                                'info'
+                            )
+                        </script>
+                    @endif
                 @else
                 Foi encontrada {{ count($oficinas) }} oficina na sua busca
                 @endif
@@ -76,7 +89,6 @@
                         </a>
                         @endforeach
                         @else
-                        <h1>Nenhuma oficina foi encontrada</h1>
                         <a href="{{ url('/') }}">
                             <button class="btn-primary btn-full btn-busca-oficinas">Voltar ao início</button>
                         </a>
