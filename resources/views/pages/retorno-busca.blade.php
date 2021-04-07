@@ -11,7 +11,7 @@
                 @if(count($oficinas)>1)
                     Foram encontradas {{ count($oficinas) }} oficinas na sua busca
                 @elseif(count($oficinas)==0)
-                    @if(count($categorias))
+                    @if(count($cat_sels))
                         Não foi encontrada nenhuma oficina na sua busca
                     @else
                         Selecione pelo menos uma categoria

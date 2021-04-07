@@ -136,7 +136,7 @@ body {
 }
 
 .text-home1 {
-    text-align: left;
+    text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
@@ -152,7 +152,7 @@ body {
 }
 
 .text-home1-b {
-    text-align: left;
+    text-align: center;
     font-size: 3.2rem;
     line-height: 2rem;
     font-weight: 600;

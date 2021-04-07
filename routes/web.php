@@ -35,6 +35,7 @@ Route::get('refinar-busca', 'App\Http\Controllers\BuscaController@RefinarBusca')
 // Página da oficina
 //======================
 Route::get('/oficinas/{id}', 'App\Http\Controllers\OficinaController@view')->name('visualizar-oficina');
+Route::get('/oficinas/{id}/agendamento', 'App\Http\Controllers\OficinaController@agendar')->name('agendamento');
 
 //=======================
 // Paginas autenticadas
