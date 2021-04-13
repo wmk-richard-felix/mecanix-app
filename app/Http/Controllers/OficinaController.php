@@ -181,6 +181,25 @@ class OficinaController extends Controller
 
         return view('pages.oficina')
         ->with('oficina', $oficina)
-        ->with('categorias', $categorias);
+        ->with('categorias', $categorias)
+        ->with('id', $idPar);
+    }
+
+    // Agendamento do serviço
+    public function agendar($idPar)
+    {
+        $id = $idPar / 99123456789;
+        $oficina = oficina::find($id);
+
+        $categorias = DB::table('categorias')
+        ->join('categoria_oficinas', 'categoria_oficinas.codigo_categoria' , '=', 'categorias.id') 
+        ->select('categorias.descricao', 'categoria_oficinas.codigo_oficina', 'categorias.id')
+        ->where('categoria_oficinas.codigo_oficina', $oficina->id)
+        ->get();
+
+        return view('pages.agendamento')
+        ->with('oficina', $oficina)
+        ->with('categorias', $categorias)
+        ->with('id', $idPar);
     }
 }

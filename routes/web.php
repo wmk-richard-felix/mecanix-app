@@ -35,18 +35,27 @@ Route::get('refinar-busca', 'App\Http\Controllers\BuscaController@RefinarBusca')
 // Página da oficina
 //======================
 Route::get('/oficinas/{id}', 'App\Http\Controllers\OficinaController@view')->name('visualizar-oficina');
+Route::post('/agendar', 'App\Http\Controllers\AtendimentoController@agendar')->name('agendar');
+
+//=======================
+// Agendamento realizado
+//=======================
+Route::get('/agendamento/{id}', 'App\Http\Controllers\AtendimentoController@realizado')->name('agendamento');
 
 //=======================
 // Paginas autenticadas
 //=======================
-Route::middleware(['auth:sanctum', 'verified'])->get('dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])
+->get('dashboard', 'App\Http\Controllers\AtendimentoController@lista')
+->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', function () {
     return view('cadastro-oficina.cadastro');
 })->name('cadastro-oficina');
 
+Route::middleware(['auth:sanctum', 'verified'])
+    ->get('/oficinas/{id}/agendamento', 'App\Http\Controllers\OficinaController@agendar')
+    ->name('agendamento');
 
 //======================
 // Cadastros

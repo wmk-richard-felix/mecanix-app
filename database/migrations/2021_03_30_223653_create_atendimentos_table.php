@@ -18,14 +18,15 @@ class CreateAtendimentosTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('codigo_usuario');
             $table->unsignedBigInteger('codigo_oficina');
-            $table->date('data_sugerida');
-            $table->date('data_confirmada');
-            $table->date('data_realizada');
+            $table->dateTime('data_sugerida');
+            $table->dateTime('data_confirmada');
+            $table->dateTime('data_realizada');
             $table->char('diagnostico_oficina', 200);
             $table->char('diagnostico_mecanix', 200);
             $table->double('valor_orcamento', 8, 2);
             $table->char('categoria_atendimento');
             $table->char('status');
+            $table->text('relato');
 
             $table->foreign('codigo_usuario')->references('id')->on('users');
             $table->foreign('codigo_oficina')->references('id')->on('oficinas');
