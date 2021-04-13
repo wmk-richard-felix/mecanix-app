@@ -54,7 +54,7 @@
                                 </div>
 
                                 <x-jet-dropdown-link href="{{ route('dashboard') }}">
-                                    {{ __('Meus Orçamentos') }}
+                                    {{ __('Meus Atendimentos') }}
                                 </x-jet-dropdown-link>
 
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
@@ -138,7 +138,7 @@
                 <!-- Account Management -->
                 @auth
                     <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Meus Orçamentos') }}
+                        {{ __('Meus Atendimentos') }}
                     </x-jet-responsive-nav-link>
                     
                     <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">

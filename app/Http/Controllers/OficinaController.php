@@ -193,7 +193,7 @@ class OficinaController extends Controller
 
         $categorias = DB::table('categorias')
         ->join('categoria_oficinas', 'categoria_oficinas.codigo_categoria' , '=', 'categorias.id') 
-        ->select('categorias.descricao', 'categoria_oficinas.codigo_oficina')
+        ->select('categorias.descricao', 'categoria_oficinas.codigo_oficina', 'categorias.id')
         ->where('categoria_oficinas.codigo_oficina', $oficina->id)
         ->get();
 
