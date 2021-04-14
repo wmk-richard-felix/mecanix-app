@@ -512,6 +512,7 @@ input[type=checkbox], input[type=radio] {
     border-radius: 6px;
     text-align: center;
     font-weight: 600;
+    color: #fff;
 }
 
 .status3 {
@@ -520,6 +521,7 @@ input[type=checkbox], input[type=radio] {
     border-radius: 6px;
     text-align: center;
     font-weight: 600;
+    color: #fff;
 }
 
 .status4 {
@@ -528,6 +530,7 @@ input[type=checkbox], input[type=radio] {
     border-radius: 6px;
     text-align: center;
     font-weight: 600;
+    color: #fff;
 }
 
 .status5 {
@@ -536,8 +539,22 @@ input[type=checkbox], input[type=radio] {
     border-radius: 6px;
     text-align: center;
     font-weight: 600;
+    color: #fff;
 }
 
+.texto_criado_em {
+    font-size: 15px;
+}
+
+.cancelar-atendimento {
+    background-color: rgba(255, 0, 0, 0.904);
+    color: #fff;
+}
+
+.avaliar-atendimento {
+    background-color: rgba(11, 82, 189, 0.904);
+    color: #fff;
+}
 
 
 /*Mobile*/

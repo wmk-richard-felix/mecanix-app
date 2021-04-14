@@ -36,11 +36,13 @@ Route::get('refinar-busca', 'App\Http\Controllers\BuscaController@RefinarBusca')
 //======================
 Route::get('/oficinas/{id}', 'App\Http\Controllers\OficinaController@view')->name('visualizar-oficina');
 Route::post('/agendar', 'App\Http\Controllers\AtendimentoController@agendar')->name('agendar');
+Route::post('/atualizar-data', 'App\Http\Controllers\AtendimentoController@atualizar')->name('atualizar-data');
 
 //=======================
 // Agendamento realizado
 //=======================
 Route::get('/agendamento/{id}', 'App\Http\Controllers\AtendimentoController@realizado')->name('agendamento');
+Route::get('/cancelar-atendimento/{id}', 'App\Http\Controllers\AtendimentoController@cancelar')->name('cancelar-atendimento');
 
 //=======================
 // Paginas autenticadas
