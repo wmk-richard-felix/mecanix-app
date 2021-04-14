@@ -30,7 +30,7 @@
                                             @elseif($atendimento->status == 3)
                                                 <p class="status3 mt-6">Agendamento realizado</p>
                                             @elseif($atendimento->status == 4)
-                                                <p class="status4 mt-6">Agendamento cancelado</p>
+                                                <p class="status4 mt-6">Atendimento cancelado</p>
                                             @else
                                                 <p class="status5 mt-6">Atendimento realizado</p>
                                             @endif
@@ -59,7 +59,7 @@
                                             @elseif($atendimento->status == 3)
                                                 <p class="status3 mt-6">Agendamento realizado</p>
                                             @elseif($atendimento->status == 4)
-                                                <p class="status4 mt-6">Agendamento cancelado</p>
+                                                <p class="status4 mt-6">Atendimento cancelado</p>
                                             @else
                                                 <p class="status5 mt-6">Atendimento realizado</p>
                                             @endif
