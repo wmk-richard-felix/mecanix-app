@@ -15,7 +15,7 @@
                     <x-jet-nav-link href="{{ route('diagnostico') }}" :active="request()->routeIs('diagnostico')" class="item-menu">
                         {{ __('Diagnóstico') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
+                    <x-jet-nav-link href="{{ route('sobre-nos') }}" :active="request()->routeIs('sobre-nos')" class="item-menu">
                         {{ __('Sobre nós') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('cadastrar-oficina') }}" :active="request()->routeIs('cadastrar-oficina')" class="item-menu">
@@ -114,7 +114,7 @@
             <x-jet-responsive-nav-link href="{{ route('diagnostico') }}" :active="request()->routeIs('diagnostico')" class="item-menu">
                 {{ __('Diagnóstico') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')" class="item-menu">
+            <x-jet-responsive-nav-link href="{{ route('sobre-nos') }}" :active="request()->routeIs('sobre-nos')" class="item-menu">
                 {{ __('Sobre nós') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('cadastrar-oficina') }}" :active="request()->routeIs('cadastrar-oficina')" class="item-menu">

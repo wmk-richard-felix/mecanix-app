@@ -18,6 +18,10 @@ Route::get('diagnostico', function () {
     return view('pages.diagnostico');
 })->name('diagnostico');
 
+
+Route::get('sobre-nos', function () {
+    return view('pages.sobre-nos');
+})->name('sobre-nos');
 //======================
 // Home Page
 //======================
