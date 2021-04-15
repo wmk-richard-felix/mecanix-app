@@ -43,6 +43,10 @@ Route::post('/atualizar-data', 'App\Http\Controllers\AtendimentoController@atual
 //=======================
 Route::get('/agendamento/{id}', 'App\Http\Controllers\AtendimentoController@realizado')->name('agendamento');
 Route::get('/cancelar-atendimento/{id}', 'App\Http\Controllers\AtendimentoController@cancelar')->name('cancelar-atendimento');
+Route::get('/avaliar-atendimento/{id}', 'App\Http\Controllers\AvaliacaoController@index')->name('cancelar-atendimento');
+Route::post('/avaliar-atendimento', 'App\Http\Controllers\AvaliacaoController@avaliar')->name('avaliar');
+
+Route::view('/avaliado', 'pages.avaliacao-feita')->name('avaliado');
 
 //=======================
 // Paginas autenticadas
