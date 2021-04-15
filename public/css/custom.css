@@ -221,6 +221,26 @@ body {
     width: 30%;
 }
 
+
+
+/* Sobre Nós */
+
+.text-about-us-main {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.text-about-us {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.text-about-us strong {
+    font-weight: 800;
+}
+
 /* Cadastro Oficina */
 
 .text-desc-cadastro-oficina {
