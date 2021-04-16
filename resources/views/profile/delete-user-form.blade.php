@@ -1,6 +1,8 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Deletar Conta') }}
+        <p class="jetstream-header-text">
+            {{ __('Deletar Conta') }}
+        </p>
     </x-slot>
 
     <x-slot name="description">

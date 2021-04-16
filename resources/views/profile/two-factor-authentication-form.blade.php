@@ -1,6 +1,8 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Autenticação de dois fatores') }}
+        <p class="jetstream-header-text">
+            {{ __('Autenticação de dois fatores') }}
+        </p>    
     </x-slot>
 
     <x-slot name="description">
@@ -53,7 +55,7 @@
         <div class="mt-5">
             @if (! $this->enabled)
                 <x-jet-confirms-password wire:then="enableTwoFactorAuthentication">
-                    <x-jet-button type="button" wire:loading.attr="disabled">
+                    <x-jet-button class="jetstream-btn-sec" type="button" wire:loading.attr="disabled">
                         {{ __('Habilitar') }}
                     </x-jet-button>
                 </x-jet-confirms-password>
@@ -73,7 +75,7 @@
                 @endif
 
                 <x-jet-confirms-password wire:then="disableTwoFactorAuthentication">
-                    <x-jet-danger-button wire:loading.attr="disabled">
+                    <x-jet-danger-button class="jetstream-btn-sec" wire:loading.attr="disabled">
                         {{ __('Desabilitar') }}
                     </x-jet-danger-button>
                 </x-jet-confirms-password>
