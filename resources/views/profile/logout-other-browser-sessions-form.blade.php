@@ -1,6 +1,8 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Sessões de Navegação') }}
+        <p class="jetstream-header-text">
+            {{ __('Sessões de Navegação') }}
+        </p>
     </x-slot>
 
     <x-slot name="description">
@@ -52,7 +54,7 @@
         @endif
 
         <div class="flex items-center mt-5">
-            <x-jet-button wire:click="confirmLogout" wire:loading.attr="disabled">
+            <x-jet-button class="jetstream-btn-sec" wire:click="confirmLogout" wire:loading.attr="disabled">
                 {{ __('Sair de outras sessões do navegador') }}
             </x-jet-button>
 
@@ -86,7 +88,7 @@
                     {{ __('Cancelar') }}
                 </x-jet-secondary-button>
 
-                <x-jet-button class="ml-2"
+                <x-jet-button class="ml-2 jetstream-btn-sec"
                             wire:click="logoutOtherBrowserSessions"
                             wire:loading.attr="disabled">
                     {{ __('Sair de outras sessões') }}

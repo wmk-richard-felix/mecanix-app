@@ -1,6 +1,9 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
+            <div class="mb-4 text-lg font-extrabold text-blue-800 mecanix-title">
+                {{ __('Preencha os dados abaixo para criar sua conta no Mecanix.') }}
+            </div>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -50,8 +53,8 @@
                     {{ __('Já possui uma conta?') }}
                 </a>
 
-                <x-jet-button class="ml-4">
-                    {{ __('Cadastrar') }}
+                <x-jet-button class="ml-4 jetstream-btn">
+                    {{ __('Criar conta') }}
                 </x-jet-button>
             </div>
         </form>

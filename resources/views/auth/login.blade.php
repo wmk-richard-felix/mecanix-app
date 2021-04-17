@@ -1,7 +1,10 @@
 <x-guest-layout>
     <x-jet-authentication-card>
+
         <x-slot name="logo">
-            {{-- <x-jet-authentication-card-logo /> --}}
+            <div class="mb-4 text-lg font-extrabold text-blue-800 mecanix-title"> 
+                    {{ __('Para ver e gerenciar as informações da sua conta, entre abaixo.') }}
+            </div>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -12,7 +15,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}" class="mecanix-login">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
@@ -39,7 +42,7 @@
                     </a>
                 @endif
 
-                <x-jet-button class="ml-4">
+                <x-jet-button class="ml-4 jetstream-btn">
                     {{ __('Entrar') }}
                 </x-jet-button>
             </div>

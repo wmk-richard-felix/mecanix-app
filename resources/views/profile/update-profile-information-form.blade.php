@@ -1,6 +1,8 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Informação do Perfil') }}
+        <p class="jetstream-header-text">
+            {{ __('Informação do Perfil') }}
+        </p>
     </x-slot>
 
     <x-slot name="description">
@@ -72,7 +74,7 @@
             {{ __('Atualizado.') }}
         </x-jet-action-message>
 
-        <x-jet-button wire:loading.attr="disabled" wire:target="photo">
+        <x-jet-button class="jetstream-btn-sec" wire:loading.attr="disabled" wire:target="photo">
             {{ __('Atualizar') }}
         </x-jet-button>
     </x-slot>

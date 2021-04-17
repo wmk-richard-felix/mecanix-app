@@ -1,6 +1,8 @@
 <x-jet-form-section submit="updatePassword">
     <x-slot name="title">
-        {{ __('Atualizar Senha') }}
+        <p class="jetstream-header-text">
+            {{ __('Atualizar Senha') }}
+        </p>
     </x-slot>
 
     <x-slot name="description">
@@ -32,7 +34,7 @@
             {{ __('Atualizado.') }}
         </x-jet-action-message>
 
-        <x-jet-button>
+        <x-jet-button class="jetstream-btn-sec">
             {{ __('Atualizar') }}
         </x-jet-button>
     </x-slot>

@@ -1,7 +1,9 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <div class="mb-4 text-center text-lg font-extrabold text-blue-800 mecanix-title">
+                {{ __('Esqueceu sua senha? Crie uma nova abaixo.') }}
+            </div>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -28,7 +30,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <x-jet-button>
-                    {{ __('Reset Password') }}
+                    {{ __('Resetar Senha') }}
                 </x-jet-button>
             </div>
         </form>

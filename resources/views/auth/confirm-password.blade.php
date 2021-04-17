@@ -1,12 +1,12 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <div class="mb-4 text-center text-lg font-extrabold text-blue-800 mecanix-title">
+                {{ __('Esta é uma área segura da aplicação.') }}
+                <br>
+                {{ __('Por favor, confirme sua senha para continuar.') }}
+            </div>
         </x-slot>
-
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
-        </div>
 
         <x-jet-validation-errors class="mb-4" />
 
@@ -19,8 +19,8 @@
             </div>
 
             <div class="flex justify-end mt-4">
-                <x-jet-button class="ml-4">
-                    {{ __('Confirm') }}
+                <x-jet-button class="ml-4 jetstream-btn">
+                    {{ __('Confirmar') }}
                 </x-jet-button>
             </div>
         </form>
