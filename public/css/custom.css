@@ -120,16 +120,12 @@ body {
     background-color:var(--neutral-darkest);
 }
 
-
-
 .form-busca-home {
     background-color: var(--neutral-lightest);
     padding: .5rem 5px;
     border-radius: 20px 20px 20px 20px;
     width: 100%;
 }
-
-
 
 .diagnostico-conteudo {
     margin-top: 2.5rem;
@@ -221,7 +217,32 @@ body {
     width: 30%;
 }
 
+/* Login */
 
+.mecanix-title {
+    color: var(--secondary);
+}
+
+.jetstream-btn {
+    background-color: var(--primary);
+}
+
+.jetstream-btn:hover {
+    background-color: var(--primary-light);
+}
+
+.jetstream-btn-sec {
+    background-color: var(--secondary);
+}
+
+.jetstream-btn-sec:hover {
+    opacity: .8;
+}
+
+.jetstream-header-text {
+    color: var(--secondary);
+    font-weight: 600;
+}
 
 /* Sobre Nós */
 
