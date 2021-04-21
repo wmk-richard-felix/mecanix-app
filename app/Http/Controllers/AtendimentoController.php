@@ -78,6 +78,15 @@ class AtendimentoController extends Controller
         $data_criacao = substr($atendimento->created_at, 8, 2).'/'.substr($atendimento->created_at, 5, 2).'/'.substr($atendimento->created_at, 0, 4).' - '.substr($atendimento->created_at, 11, 8);
         $data_realizado = substr($atendimento->data_realizada, 8, 2).'/'.substr($atendimento->data_realizada, 5, 2).'/'.substr($atendimento->data_realizada, 0, 4).' - '.substr($atendimento->data_realizada, 11, 8);
 
+        $avaliacao = DB::table('avaliacoes')
+        ->where('codigo_atendimento', $id_atendimento)
+        ->get();
+
+        $avaliado = false;
+        if (count($avaliacao)):
+            $avaliado = true;
+        endif;
+        
         return view('pages.agendamento-realizado')
         ->with('oficina', $oficina)
         ->with('categoria', $categoria->descricao)
@@ -92,6 +101,8 @@ class AtendimentoController extends Controller
         ->with('id', $atendimento->id)
         ->with('idToken', $id)
         ->with('criado_em', $data_criacao)
+        ->with('avaliado', $avaliado)
+        ->with('avaliacao', $avaliacao)
         ->with('status', $status);
 
     }

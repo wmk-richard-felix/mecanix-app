@@ -26,7 +26,7 @@
                             <p class="contato-oficina">Categoria do atendimento</p>
                             <p class="desc-pag-oficina">{{ $categoria }}</p>
                             <p class="contato-oficina">Problema relatado</p>
-                            <textarea class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block" name="relato" id="relato" cols="45" rows="8" readonly>{{ $relato }}</textarea>
+                            <p class="desc-pag-oficina">{{ $relato }}</p>
 
                         </div>
                         <div class="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1 ml-4">
@@ -37,10 +37,24 @@
                             @if($statusCod == 5)
                                 <p class="contato-oficina">Atendimento realizado em</p>
                                 <p class="desc-pag-oficina">{{ $data_realizado }}</p>
-                                <br>
-                                <a href="{{ url('avaliar-atendimento/'.$idToken) }}">
-                                    <button class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block avaliar-atendimento">Avaliar Atendimento</button>
-                                </a>
+                                @if($avaliado)
+                                    <p class="contato-oficina">Avaliação do atendimento</p>
+                                    <div class="stars-avalia mt-3">
+                                        @for ($i = 0; $i < $avaliacao[0]->estrelas; $i++)
+                                            <img src="/img/star1.png">
+                                        @endfor
+                                        @for ($i = 0; $i < (5 - $avaliacao[0]->estrelas); $i++)
+                                            <img src="/img/star0.png">
+                                        @endfor
+                                    </div>
+                                    <p class="desc-pag-oficina">{{date('d/m/Y', strtotime($avaliacao[0]->created_at))}}</p>
+                                    <p class="desc-pag-oficina avaliacao-comentario">"{{ $avaliacao[0]->comentario }}"</p>
+                                @else
+                                    <br>
+                                    <a href="{{ url('avaliar-atendimento/'.$idToken) }}">
+                                        <button class="form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block avaliar-atendimento">Avaliar Atendimento</button>
+                                    </a>
+                                @endif
                             @endif
                             @if($oficinaEditando)
                                 @if($statusCod == 1)

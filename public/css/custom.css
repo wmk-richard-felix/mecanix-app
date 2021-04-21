@@ -625,6 +625,28 @@ input[type=checkbox], input[type=radio] {
     margin-right: 10px;
 }
 
+.avaliacao-oficina-star {
+    color: #e7a74e;
+    font-size: 1.3rem;
+}
+
+.avaliacao-oficina {
+    color: #e7a74e;
+    font-size: 1.3rem;
+}
+
+.avaliacao-nome {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.avaliacao-star {
+    font-weight: 600;
+}
+
+.avaliacao-comentario {
+    color: #717171;
+}
 
 /*Mobile*/
 @media (max-width: 802px) {
