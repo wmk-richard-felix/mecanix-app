@@ -179,9 +179,29 @@ class OficinaController extends Controller
         ->where('categoria_oficinas.codigo_oficina', $oficina->id)
         ->get();
 
+        $avaliacoes = DB::table('avaliacoes')
+        ->join('users', 'avaliacoes.codigo_usuario', '=', 'users.id')
+        ->select('avaliacoes.*', 'users.name')
+        ->where('codigo_oficina', $id)
+        ->get();
+
+        $avaliado = false;
+        $media = 0;
+        if (count($avaliacoes)):
+            $avaliado = true;
+            $contador = 0;
+            foreach ($avaliacoes as $avaliacao):
+                $contador += $avaliacao->estrelas;
+            endforeach;
+            $media = $contador/count($avaliacoes);
+        endif;
+
         return view('pages.oficina')
         ->with('oficina', $oficina)
         ->with('categorias', $categorias)
+        ->with('avaliado', $avaliado)
+        ->with('avaliacoes', $avaliacoes)
+        ->with('media', $media)
         ->with('id', $idPar);
     }
 

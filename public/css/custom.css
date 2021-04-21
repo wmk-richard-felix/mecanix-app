@@ -519,6 +519,12 @@ input[type=checkbox], input[type=radio] {
     margin-top: 8%;
 }
 
+.titulo-paginas {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
 .sobre-oficina {
     font-size: 1.2rem;
     font-weight: 600;
@@ -528,6 +534,20 @@ input[type=checkbox], input[type=radio] {
     width: 70%;
     font-size: 1.3rem;
     margin-top: 8%;
+}
+
+.btn-avaliar {
+    width: 20%;
+    font-size: 1.3rem;
+    margin-top: 2%;
+}
+
+.btn-avaliado {
+    width: 20%;
+    font-size: 1.3rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: #fa7020;
 }
 
 .info-oficina {
@@ -597,6 +617,36 @@ input[type=checkbox], input[type=radio] {
     color: #fff;
 }
 
+.stars-avalia {
+    display: inline-flex;
+}
+
+.star-avalia {
+    margin-right: 10px;
+}
+
+.avaliacao-oficina-star {
+    color: #e7a74e;
+    font-size: 1.3rem;
+}
+
+.avaliacao-oficina {
+    color: #e7a74e;
+    font-size: 1.3rem;
+}
+
+.avaliacao-nome {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.avaliacao-star {
+    font-weight: 600;
+}
+
+.avaliacao-comentario {
+    color: #717171;
+}
 
 /*Mobile*/
 @media (max-width: 802px) {
