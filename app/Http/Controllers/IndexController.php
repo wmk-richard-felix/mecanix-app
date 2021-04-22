@@ -41,14 +41,6 @@ class IndexController extends Controller
         $cidades_sels = [$cidade];
         $estados_sels = [$uf];
         $cat_sels = [$categoria];
-        /*
-         * SELECT oficinas.*, categorias.id FROM oficinas
-         * INNER JOIN categoria_oficinas ON categoria_oficinas.codigo_oficina = oficinas.id
-         * INNER JOIN categorias ON categorias.id = categoria_oficinas.codigo_categoria
-         * WHERE oficinas.uf = $uf
-         * AND oficinas.cidade = $cidade
-         * AND categorias.id = $id
-         */
         if ($cidade != ""):
             // Todos os campos preenchidos
             $oficinas = DB::table('oficinas')
@@ -73,12 +65,6 @@ class IndexController extends Controller
         // Busca as categorias das oficinas
         $categorias_oficina = [];
         foreach ($oficinas as $oficina):
-            /*
-             * SELECT categorias.descricao, categoria_oficinas.codigo_oficina 
-             * FROM categorias 
-             * INNER JOIN categoria_oficinas ON categoria_oficinas.codigo_categoria = categorias.id 
-             * WHERE categoria_oficinas.codigo_oficina = $id
-             */
             $categorias = DB::table('categorias')
             ->join('categoria_oficinas', 'categoria_oficinas.codigo_categoria' , '=', 'categorias.id') 
             ->select('categorias.descricao', 'categoria_oficinas.codigo_oficina')
@@ -100,17 +86,5 @@ class IndexController extends Controller
             ->with('cat_sels', $cat_sels)
             ->with('todas_categorias', $todas_categorias)
             ->with('cryptKey', $cryptKey);
-    }
-
-    public function BuscaUrl(Request $request)
-    {
-        $oficinas = DB::table('oficinas')
-            ->join('categoria_oficinas', 'categoria_oficinas.codigo_oficina', '=', 'oficinas.id')
-            ->join('categorias', 'categorias.id' , '=', 'categoria_oficinas.codigo_categoria') 
-            ->select('oficinas.*', 'categorias.descricao')
-            ->where('categorias.id', $request->categoria)
-            ->get();
-
-        return view('pages.retorno-busca')->with('oficinas', $oficinas);
     }
 }
