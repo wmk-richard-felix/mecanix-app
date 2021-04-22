@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\DB;
 
 class OficinaController extends Controller
 {
+    public function cadastro()
+    {
+        $todas_categorias = categoria::all();
+
+        return view('cadastro-oficina.cadastro')->with('todas_categorias', $todas_categorias);
+    }
     /*
      * Verifica se o usuário logado já tem oficinas cadastradas
      */
@@ -87,6 +93,8 @@ class OficinaController extends Controller
      */
     public function edit($id)
     {
+        $todas_categorias = categoria::all();
+
         $oficina = oficina::find($id);
         $categorias = categoria_oficina::where('codigo_oficina', $id)->get();
         $categoriasMarcadas = [];
@@ -95,7 +103,9 @@ class OficinaController extends Controller
             array_push($categoriasMarcadas, $categoria->codigo_categoria);
         endforeach;
 
-        return view('cadastro-oficina.editar')->with('oficina', $oficina)->with('categorias', $categoriasMarcadas);
+        return view('cadastro-oficina.editar')->with('oficina', $oficina)
+        ->with('categorias', $categoriasMarcadas)
+        ->with('todas_categorias', $todas_categorias);
     }
 
     /*
