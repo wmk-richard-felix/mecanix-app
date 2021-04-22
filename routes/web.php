@@ -32,7 +32,7 @@ Route::post('/retorno-busca-filtro', 'App\Http\Controllers\BuscaController@Reali
 //======================
 // Busca
 //======================
-Route::get('/busca-assistente', 'App\Http\Controllers\IndexController@BuscaUrl')->name('busca-assistente');
+Route::get('/busca-assistente', 'App\Http\Controllers\BuscaController@BuscaUrl')->name('busca-assistente');
 Route::get('refinar-busca', 'App\Http\Controllers\BuscaController@RefinarBusca')->name('refinar-busca');
 
 //======================
