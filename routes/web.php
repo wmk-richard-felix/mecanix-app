@@ -59,9 +59,7 @@ Route::middleware(['auth:sanctum', 'verified'])
 ->get('dashboard', 'App\Http\Controllers\AtendimentoController@lista')
 ->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', function () {
-    return view('cadastro-oficina.cadastro');
-})->name('cadastro-oficina');
+Route::middleware(['auth:sanctum', 'verified'])->get('cadastro-oficina', 'App\Http\Controllers\OficinaController@cadastro')->name('cadastro-oficina');
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/oficinas/{id}/agendamento', 'App\Http\Controllers\OficinaController@agendar')
