@@ -16,8 +16,8 @@
                     </div>
 
                     <div class="chatroom">
-                        <iframe class="chatbot" src="http://192.168.0.189:8080"></iframe>
-                        {{-- <iframe class="chatbot" src="https://mecanix-chatroom.azurewebsites.net/"></iframe> --}}
+                        {{-- <iframe class="chatbot" src="http://192.168.0.189:8080"></iframe> --}}
+                        <iframe class="chatbot" src="https://mecanix-chatroom1.azurewebsites.net/"></iframe>
                     </div>
                 </div>
 
